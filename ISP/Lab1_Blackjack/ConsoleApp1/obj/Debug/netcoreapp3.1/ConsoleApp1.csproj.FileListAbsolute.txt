@@ -1,0 +1,11 @@
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.exe
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.deps.json
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.json
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.dev.json
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.dll
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.pdb
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
+D:\University\Labs\ISP\Lab1_Blackjack\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
