@@ -1,7 +1,6 @@
 all: build run
 
-build:
+build: 
 	gcc main.c -o main -std=c89
-	
 run:
 	./main

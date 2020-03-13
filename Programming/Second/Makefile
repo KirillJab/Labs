@@ -1,6 +1,8 @@
-all:
-	#gcc -c conv.c -o conv.o -std=c89
-	#ar rcs conv.a conv.o
-	gcc main.c -o main.o -std=c89
-	#gcc -o main mian.o -L -conv
+all: build run
+
+build:
+	gcc -c libconv.c -o libconv.o -std=c89
+	ar rcs libconv.a libconv.o
+	gcc main.c -L. -lconv -o main
+run:
 	./main
