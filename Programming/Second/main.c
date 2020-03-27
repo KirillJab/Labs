@@ -11,7 +11,7 @@ int main()
     double e;
     bool end = false;
     bool notNull = false;
-    char str[10] = "";
+    char str[20] = "";
 
     while (!end)
     {

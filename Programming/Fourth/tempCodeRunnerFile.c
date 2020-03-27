@@ -1,0 +1,1 @@
+strLen(word1) - 1]
