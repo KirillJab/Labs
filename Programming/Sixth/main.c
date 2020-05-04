@@ -80,6 +80,22 @@ Tree createTree(FILE *fin)
     return tree;
 }
 
+void deleteTree(Tree *tree)
+{
+    if (tree == NULL) return;
+    deleteBranch(tree->root->left);
+    deleteBranch(tree->root->right);
+    tree->root = NULL;
+}
+
+void deleteBranch(Node *node)
+{
+    if (node == NULL) return;
+    deleteBranch(node->left);
+    deleteBranch(node->right);
+    node = NULL;
+}
+
 void showNode(Node *curNode)
 {
     if(curNode == NULL) return;
@@ -136,5 +152,6 @@ int main()
 
 
     fclose(fin);
+    deleteTree(&tree);
     return 0;
 }

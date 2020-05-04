@@ -54,6 +54,13 @@ Numb createNumber(int inpNum)
     return number;
 }
 
+void deleteNumber(Numb *number)
+{
+    if (number->tail == NULL) return;
+    deleteNumber(number->tail);
+    number = NULL;
+}
+
 int showNumber(Numb *number)
 {
     Digit *curDigit = number->tail;

@@ -1,0 +1,5 @@
+Vasya 12341234 800
+Petya qwerty 1000
+Ivan SasdSawd 1337
+Paul asdf 2000
+Kirill qwer 4321
