@@ -1,0 +1,18 @@
+//---------------------------------------------------------------------------
+
+#ifndef CartH
+#define CartH
+#include "CRect.h"
+//---------------------------------------------------------------------------
+
+
+class Cart : public CRect
+{
+	int wheelsize;
+	public:
+	Cart(int, int, int, int, int, System::Uitypes::TColor);
+	void show (TCanvas* Canvas) override;
+	void hide (TCanvas* Canvas) override;
+    void moveto (int, int, int, int) override;
+};
+#endif

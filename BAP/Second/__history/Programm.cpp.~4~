@@ -1,0 +1,45 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Programm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+list<Tool> shelf;
+Tool curtool;
+int i;
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+
+}
+
+void __fastcall TForm1::AddClick(TObject *Sender)
+{
+	/*
+	wchar_t* temp;
+	GroupName->GetTextBuf(curtool.groupName, GroupName->GetTextLen());
+	Name->GetTextBuf(curtool.name, Name->GetTextLen());
+	Color->GetTextBuf(curtool.color, Color->GetTextLen());
+
+	if(Delivery->Text == "Yes")
+	{
+		curtool.delivery = true;
+	}
+	else
+	{
+		curtool.delivery = false;
+	}
+	shelf.push_back(curtool);
+	Memo->Lines->Add(GroupName->Text<<"		");
+	*/
+}void __fastcall TForm1::LoadClick(TObject *Sender)
+{
+	TFileStream* fs = new TFileStream ("Shelf.txt", fmOpenReadWrite|fmShareDenyWrite);
+
+}
+

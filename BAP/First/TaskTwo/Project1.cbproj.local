@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.613,D:\University\Labs\BAP\First\TaskTwo\Unit2.cpp=D:\University\Labs\BAP\First\TaskTwo\Figure.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.304,=D:\University\Labs\BAP\First\TaskTwo\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.121,D:\University\Labs\BAP\First\TaskTwo\Unit2.h=D:\University\Labs\BAP\First\TaskTwo\Rectangle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.613,D:\University\Labs\BAP\First\TaskTwo\Unit2.h=D:\University\Labs\BAP\First\TaskTwo\Figure.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.557,D:\University\Labs\BAP\First\TaskTwo\_Ellipse.h=D:\University\Labs\BAP\First\TaskTwo\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.020,D:\University\Labs\BAP\First\TaskTwo\Rectangle.h=D:\University\Labs\BAP\First\TaskTwo\_Rectangle.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.720,=D:\University\Labs\BAP\First\TaskTwo\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.121,D:\University\Labs\BAP\First\TaskTwo\Unit2.cpp=D:\University\Labs\BAP\First\TaskTwo\Rectangle.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.740,=D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.836,D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp=D:\University\Labs\BAP\First\TaskTwo\_Square.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.531,D:\University\Labs\BAP\First\TaskTwo\Figure.h=D:\University\Labs\BAP\First\TaskTwo\_Figure.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.209,=D:\University\Labs\BAP\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.883,D:\University\Labs\BAP\First\TaskTwo\Project1PCH1.h=D:\University\Labs\BAP\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.886,=D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.737,=D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.427,D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp=D:\University\Labs\BAP\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.030,D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp=D:\University\Labs\BAP\First\TaskTwo\Programm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.030,D:\University\Labs\BAP\First\TaskTwo\Unit1.dfm=D:\University\Labs\BAP\First\TaskTwo\Programm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.223,D:\University\Labs\BAP\First\TaskTwo\Project1.cbproj=D:\University\Labs\BAP\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.125,=D:\University\Labs\BAP\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.557,D:\University\Labs\BAP\First\TaskTwo\_Ellipse.cpp=D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.270,D:\University\Labs\BAP\First\TaskTwo\_Circle.h=D:\University\Labs\BAP\First\TaskTwo\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.160,D:\University\Labs\BAP\First\TaskTwo\Programm.cpp=D:\University\Labs\BAP\First\TaskTwo\_Programm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.270,D:\University\Labs\BAP\First\TaskTwo\_Circle.cpp=D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.427,D:\University\Labs\BAP\First\TaskTwo\Unit1.dfm=D:\University\Labs\BAP\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.030,D:\University\Labs\BAP\First\TaskTwo\Unit1.h=D:\University\Labs\BAP\First\TaskTwo\Programm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.836,D:\University\Labs\BAP\First\TaskTwo\Unit1.h=D:\University\Labs\BAP\First\TaskTwo\_Square.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.160,D:\University\Labs\BAP\First\TaskTwo\Programm.h=D:\University\Labs\BAP\First\TaskTwo\_Programm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.160,D:\University\Labs\BAP\First\TaskTwo\Programm.dfm=D:\University\Labs\BAP\First\TaskTwo\_Programm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.427,D:\University\Labs\BAP\First\TaskTwo\Unit1.h=D:\University\Labs\BAP\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.531,D:\University\Labs\BAP\First\TaskTwo\Figure.cpp=D:\University\Labs\BAP\First\TaskTwo\_Figure.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.020,D:\University\Labs\BAP\First\TaskTwo\Rectangle.cpp=D:\University\Labs\BAP\First\TaskTwo\_Rectangle.cpp</Transaction>
+    <Transaction>2020.04.09 19:35:22.596,=D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp</Transaction>
+    <Transaction>2020.04.09 19:35:35.926,D:\University\Labs\BAP\First\TaskTwo\_Triangle.h=D:\University\Labs\BAP\First\TaskTwo\Unit1.h</Transaction>
+    <Transaction>2020.04.09 19:35:35.926,D:\University\Labs\BAP\First\TaskTwo\_Triangle.cpp=D:\University\Labs\BAP\First\TaskTwo\Unit1.cpp</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="_Ellipse.cpp"/>
+    <File Path="_Ellipse.cpp"/>
+    <File Path="_Ellipse.h"/>
+    <File Path="_Figure.cpp"/>
+    <File Path="_Figure.cpp"/>
+    <File Path="_Figure.h"/>
+    <File Path="_Programm.cpp"/>
+    <File Path="_Programm.cpp"/>
+    <File Path="_Programm.dfm"/>
+    <File Path="_Programm.h"/>
+    <File Path="_Rectangle.cpp"/>
+    <File Path="_Rectangle.cpp"/>
+    <File Path="_Rectangle.h"/>
+    <File Path="_Square.cpp"/>
+    <File Path="_Square.cpp"/>
+    <File Path="_Square.h"/>
+    <File Path="_Circle.cpp"/>
+    <File Path="_Circle.cpp"/>
+    <File Path="_Circle.h"/>
+    <File Path="_Triangle.cpp"/>
+    <File Path="_Triangle.cpp"/>
+    <File Path="_Triangle.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

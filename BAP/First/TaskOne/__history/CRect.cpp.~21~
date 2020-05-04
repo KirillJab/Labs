@@ -1,0 +1,58 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "CRect.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+CRect::CRect(int x1, int y1, int x2, int y2, System::Uitypes::TColor color)
+{
+	this->x1 = x1;
+	this->y1 = y1;
+	this->x2 = x2;
+	this->y2 = y2;
+	this->color = color;
+}
+
+void CRect::hide (TCanvas* Canvas)
+{
+	Canvas->Pen->Color = clWhite;
+	Canvas->Brush->Color = clWhite;
+	Canvas->Rectangle(x1, y1, x2, y2);
+}
+
+void CRect::show (TCanvas* Canvas)
+{
+	Canvas->Pen->Color = clBlack;
+	Canvas->Brush->Color = color;
+	Canvas->Rectangle(x1, y1, x2, y2);
+}
+
+void CRect::moveto (TCanvas* Canvas, int a, int b, int c, int d)
+{
+	if(x1 + a > 0)
+	x1+=a;
+	else
+	x1=0;
+	if(xy1 + b > 0)
+	y1+=b;
+	else
+	y1=0;
+	if(x2 + c < 900)
+	x2+=c;
+	else
+	x2=900;
+	if(y2 + d < 500)
+	y2+=d;
+	else
+	xy2=500;
+}
+
+void CRect::move (TCanvas* Canvas, int a, int b, int c, int d)
+{
+	this->hide(Canvas);
+	this->moveto(Canvas, a, b, c, d);
+    this->show(Canvas);
+}
+

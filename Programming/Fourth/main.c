@@ -70,10 +70,7 @@ void main()
         printf("\n\nError occured: can't open the file!\n\n");
         return;
     }
-    /*
-    printf("\n\n%d\n\n", strCmp("abc", "Abc!"));
-    */
-    fgets(&str, 2000, input);
+    fgets(str, 2000, input);
     printf("\n%s", str);
 
     while (str[i] != '\0')

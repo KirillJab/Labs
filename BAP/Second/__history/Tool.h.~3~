@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#ifndef ToolH
+#define ToolH
+//---------------------------------------------------------------------------
+
+class Tool
+{
+	public:
+	int availabe, sold;
+	wchar_t* groupName, name, color;
+	bool delivery;
+};
+
+
+#endif

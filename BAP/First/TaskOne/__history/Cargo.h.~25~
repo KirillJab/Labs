@@ -1,0 +1,15 @@
+//---------------------------------------------------------------------------
+#include "CRect.h"
+#ifndef CargoH
+#define CargoH
+//---------------------------------------------------------------------------
+
+class Cargo : public CRect
+{
+	int dV;
+	public:
+	Cargo (int, int, int, int, System::Uitypes::TColor);
+	void moveto (TCanvas*, int, int, int, int) override;
+   	void move(TCanvas*, int, int, int, int) override;
+};
+#endif

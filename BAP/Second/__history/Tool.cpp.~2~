@@ -1,0 +1,15 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Tool.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+wchar_t* Tool::extract(wchar_t*)
+{
+	wchar_t* str[100];
+    strcat
+	return str;
+}
+
+

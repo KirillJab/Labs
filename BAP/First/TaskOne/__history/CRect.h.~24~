@@ -1,0 +1,18 @@
+﻿//---------------------------------------------------------------------------
+#include <vcl.h>
+#ifndef CRectH
+#define CRectH
+//---------------------------------------------------------------------------
+
+public class CRect
+{
+	public:
+	int x1, y1, x2, y2;
+	System::Uitypes::TColor color;
+	CRect(int, int, int, int, System::Uitypes::TColor);
+	void hide(TCanvas*);
+    void moveto(TCanvas*, int, int, int, int);
+	virtual void show(TCanvas*);
+	virtual void move(TCanvas*, int, int, int, int);
+};
+#endif

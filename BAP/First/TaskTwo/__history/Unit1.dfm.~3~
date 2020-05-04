@@ -1,0 +1,62 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 699
+  ClientWidth = 1047
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 0
+    Top = 0
+    Width = 800
+    Height = 700
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 831
+    Top = 8
+    Width = 185
+    Height = 241
+    Caption = 'Figure:'
+    TabOrder = 0
+  end
+  object Rectangle: TRadioButton
+    Left = 848
+    Top = 32
+    Width = 113
+    Height = 17
+    Caption = 'Rectangle'
+    TabOrder = 1
+  end
+  object Square: TRadioButton
+    Left = 848
+    Top = 64
+    Width = 113
+    Height = 17
+    Caption = 'Square'
+    TabOrder = 2
+  end
+  object RadioButton3: TRadioButton
+    Left = 848
+    Top = 96
+    Width = 113
+    Height = 17
+    Caption = 'RadioButton3'
+    TabOrder = 3
+  end
+  object RadioButton4: TRadioButton
+    Left = 848
+    Top = 128
+    Width = 113
+    Height = 17
+    Caption = 'RadioButton4'
+    TabOrder = 4
+  end
+end

@@ -1,0 +1,25 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Cargo.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+Cargo::Cargo (int a, int b, int c, int d, System::Uitypes::TColor color) : CRect(a, b, c, d, color)
+{ }
+
+void CRect::moveto (TCanvas* Canvas, int a, int b, int c, int d)
+{
+	x1 += a;
+	y1 += b;
+	x2 += c;
+	y2 += d;
+}
+
+void CRect::move (TCanvas* Canvas, int a, int b, int c, int d)
+{
+	this->hide(Canvas);
+	this->moveto(Canvas, a, b, c, d);
+	this->show(Canvas);
+}

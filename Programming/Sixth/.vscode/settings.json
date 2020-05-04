@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "fstream": "c",
+        "stdio.h": "c",
+        "malloc.h": "c"
+    }
+}

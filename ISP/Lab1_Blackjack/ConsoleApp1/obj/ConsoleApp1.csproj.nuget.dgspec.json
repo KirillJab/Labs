@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\University\\Labs\\ISP\\Lab1_Blackjack\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
         "projectPath": "D:\\University\\Labs\\ISP\\Lab1_Blackjack\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\Кирилл\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Kirill\\.nuget\\packages\\",
         "outputPath": "D:\\University\\Labs\\ISP\\Lab1_Blackjack\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Кирилл\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kirill\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

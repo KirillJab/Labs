@@ -65,7 +65,7 @@ int ConvertToHigher (int k, int n, int base, char *str)
 
 int ConvertToLower (int n, int base)
 {
-    int num = 0, i = 0, k = 1;
+    int num = 0, k = 1;
     while (n)
     {
         num+=n%base*k;

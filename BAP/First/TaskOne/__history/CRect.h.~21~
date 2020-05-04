@@ -1,0 +1,17 @@
+﻿//---------------------------------------------------------------------------
+#include <vcl.h>
+#ifndef CRectH
+#define CRectH
+//---------------------------------------------------------------------------
+
+class CRect
+{
+    public:
+	int x1, y1, x2, y2;
+	CRect(int, int, int, int);
+	void hide(TCanvas*);
+	void moveto(TCanvas*, int, int, int, int);
+	void show(TCanvas*);
+	void move(TCanvas*, int, int, int, int);
+};
+#endif

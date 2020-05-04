@@ -97,4 +97,5 @@ int main()
         }
     }
     printf("\n\nVolume per second = %f", volume);
+    return 0;
 }

@@ -1,0 +1,68 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 508
+  ClientWidth = 821
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image: TImage
+    Left = 0
+    Top = 0
+    Width = 705
+    Height = 509
+  end
+  object Button1: TButton
+    Left = 720
+    Top = 248
+    Width = 93
+    Height = 42
+    Caption = 'Create cart'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 720
+    Top = 312
+    Width = 93
+    Height = 41
+    Caption = 'Fill the cart'
+    TabOrder = 1
+    Visible = False
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 720
+    Top = 376
+    Width = 93
+    Height = 45
+    Caption = 'Change direction'
+    TabOrder = 2
+    Visible = False
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 720
+    Top = 440
+    Width = 93
+    Height = 41
+    Caption = 'Push the cart'
+    TabOrder = 3
+    Visible = False
+    OnClick = Button4Click
+  end
+  object Timer: TTimer
+    Enabled = False
+    Interval = 5
+    OnTimer = TimerTimer
+    Left = 776
+    Top = 16
+  end
+end

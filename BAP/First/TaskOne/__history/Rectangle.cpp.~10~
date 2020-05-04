@@ -1,0 +1,39 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Rectangle.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+
+Rectangle::Rectangle (int x1, int y1, int x2, int y2)
+{
+	this->x1 = x1;
+	this->y1 = y1;
+	this->x2 = x2;
+	this->y2 = y2;
+}
+
+void Rectangle::hide(TCanvas* Canvas)
+{
+	Image->Pen->Color = clWhite;
+	Image->Brush->Color = clWhite;
+	Image->Rectangle(x1, y1, x2, y2);
+}
+
+void Rectangle::show(TCanvas* Canvas)
+{
+	Image->Pen->Color = clWhite;
+	Image->Brush->Color = clWhite;
+	Image->Rectangle(x1, y1, x2, y2);
+}
+
+void Rectangle::move(TCanvas*, int x1, int y1, int x2, int y2)
+{
+	hide(Canvas);
+	x1+=xn;
+	y1+=yn;
+	x2+=xm;
+	y2+=ym;
+}
+

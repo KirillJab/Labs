@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#ifndef _TriangleH
+#define _TriangleH
+#include "_Figure.h"
+//---------------------------------------------------------------------------
+
+class _Trinagle : public Figure
+{
+	public:
+	_Trinagle() : Figure(){};
+
+	void OnMouseDown (TStaticText*, TStaticText*, TStaticText*, TStaticText*, int, int) override;
+	virtual void OnMouseUp (TStaticText*, TStaticText*,TStaticText*, TStaticText*, TCanvas*, int, int) override;
+	virtual void OnMouseMove(TStaticText*, TStaticText*, TStaticText*, TStaticText*, TCanvas*, int, int) override;
+	void calc() override;
+	void rotate(TCanvas*, int) override;
+	void show(TCanvas*);
+    void show(TCanvas*, int, int, int, int);
+};
+
+#endif

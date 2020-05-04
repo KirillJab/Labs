@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Programm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+list<Tool> shelf;
+Tool tool;
+int i;
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+
+}
+
+void __fastcall TForm1::AddClick(TObject *Sender)
+{
+	tool.groupName << GroupName->Text;
+	tool.name << Name->Text;
+	tool.available = Available->Text.ToInt();
+	tool.sold = Sold->Text.ToInt();
+	tool.color << Color->Text;
+	if(Delivery->Text == "Yes")
+	{
+		tool.delivery = true;
+	}
+	if(Delivery->Text == "No")
+	{
+		tool.delivery = false;
+    }
+}

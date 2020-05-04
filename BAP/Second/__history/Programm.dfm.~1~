@@ -1,0 +1,141 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 587
+  ClientWidth = 745
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ListBox: TListBox
+    Left = 24
+    Top = 24
+    Width = 489
+    Height = 537
+    ItemHeight = 13
+    TabOrder = 0
+  end
+  object Add: TButton
+    Left = 560
+    Top = 255
+    Width = 137
+    Height = 25
+    Caption = 'Add'
+    TabOrder = 1
+    OnClick = AddClick
+  end
+  object Update: TButton
+    Left = 560
+    Top = 410
+    Width = 137
+    Height = 25
+    Caption = 'Update'
+    TabOrder = 2
+  end
+  object Sort: TButton
+    Left = 560
+    Top = 286
+    Width = 137
+    Height = 25
+    Caption = 'Sort'
+    TabOrder = 3
+  end
+  object Save: TButton
+    Left = 560
+    Top = 379
+    Width = 137
+    Height = 25
+    Caption = 'Save'
+    TabOrder = 4
+  end
+  object Find: TButton
+    Left = 560
+    Top = 317
+    Width = 137
+    Height = 25
+    Caption = 'Find'
+    TabOrder = 5
+  end
+  object Exit: TButton
+    Left = 560
+    Top = 536
+    Width = 137
+    Height = 25
+    Caption = 'Exit'
+    TabOrder = 6
+  end
+  object Name: TEdit
+    Left = 560
+    Top = 92
+    Width = 137
+    Height = 21
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    TextHint = 'Name'
+  end
+  object Sold: TEdit
+    Left = 560
+    Top = 146
+    Width = 137
+    Height = 21
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+    TextHint = 'Sold'
+  end
+  object Available: TEdit
+    Left = 560
+    Top = 119
+    Width = 137
+    Height = 21
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+    TextHint = 'Available'
+  end
+  object Color: TEdit
+    Left = 560
+    Top = 173
+    Width = 137
+    Height = 21
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+    TextHint = 'Color'
+  end
+  object Delivery: TEdit
+    Left = 560
+    Top = 200
+    Width = 137
+    Height = 21
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+    TextHint = 'Delivery'
+  end
+  object GroupName: TEdit
+    Left = 560
+    Top = 65
+    Width = 137
+    Height = 21
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 12
+    TextHint = 'Group Name'
+  end
+  object Button1: TButton
+    Left = 560
+    Top = 348
+    Width = 137
+    Height = 25
+    Caption = 'Delete'
+    TabOrder = 13
+  end
+end
