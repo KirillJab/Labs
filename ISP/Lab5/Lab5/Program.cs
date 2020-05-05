@@ -27,7 +27,7 @@ namespace Lab3
             }
             while(battlefield.Count > 1)
             {
-                Console.WriteLine("Who do you want to see fighting for glory? Enter the number of the first contestant!");
+                Console.WriteLine("\nWho do you want to see fighting for glory? Enter the number of the first contestant!");
                 while(true)
                 {
                     try
@@ -73,17 +73,20 @@ namespace Lab3
 
                 int count = 0;
 
-                while(battlefield[cont1].isAlive && battlefield[cont2].isAlive && count < 11)
+                while(battlefield[cont1].isAlive && battlefield[cont2].isAlive)
                 {
                     count++;
-                    battlefield[cont2].gethit(battlefield[cont1].attack());
+                    
+                    battlefield[cont2].gethit(battlefield[cont1].attack());if (count == 10)
+                    {
+                        battlefield[cont2].isAlive = false;
+                        Console.WriteLine("\nThe warriors got tired and the second contestant gave up");
+                    }
                     Console.WriteLine();
-                    battlefield[cont1].gethit(battlefield[cont2].attack());
-                }
-                if(count == 10)
-                {
-                    battlefield.RemoveAt(cont2);
-                    Console.WriteLine("The warriors got tired and the second contestant gave up");
+                    if (battlefield[cont2].isAlive)
+                    {
+                        battlefield[cont1].gethit(battlefield[cont2].attack());
+                    }
                 }
                 if (!battlefield[cont1].isAlive)
                 {

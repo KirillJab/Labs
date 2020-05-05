@@ -10,7 +10,7 @@ public class Human
 	public int age { get; set; }
 	public string name { get; set; }
 	static int count = 0;
-	int id;
+	int id { get; }
 	Genders gender { get; set; }
 
 

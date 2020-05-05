@@ -2,7 +2,7 @@
 
 public class Cataphract : Soldier
 {
-	int horseSpeed;
+	int horseSpeed { get; set; }
 
 
 	// CONSTRUCTORS

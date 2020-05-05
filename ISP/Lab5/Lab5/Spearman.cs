@@ -29,7 +29,7 @@ public class Spearman : Soldier
 		if (isAlive)
 		{
 			Random rand = new Random();
-			int hit = damage + speed / 5;
+			int hit = damage + speed / 5 + spearlength/20;
 			if (rand.Next(0, 4) == 3)
 			{
 				hit += damage / 2;

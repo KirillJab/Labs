@@ -2,7 +2,7 @@
 
 public class Legionary : Soldier
 {
-	int shieldArmour;
+	int shieldArmour { get; set; }
 
 
 	// CONSTRUCTORS
