@@ -111,7 +111,7 @@ namespace Lab3
                     case 'q':
                         {
                             Console.Clear();
-                            quit = true;
+                            return;
                             break;
                         }
                     default:

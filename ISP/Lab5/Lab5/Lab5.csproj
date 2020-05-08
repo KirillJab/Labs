@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archer.cs" />
     <Compile Include="Cataphract.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Legionary.cs" />

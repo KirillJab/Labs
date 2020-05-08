@@ -10,24 +10,24 @@ namespace Lab3
     {
         static void Main(string[] args)
         {
-            List<Soldier> battlefield = new List<Soldier>() { };
+            List<Soldier> tournament = new List<Soldier>() { };
             Soldier warrior1 = new Spearman();
             int cont1 = -1, cont2 = -1;
 
-            battlefield.Add(warrior1);
+            tournament.Add(warrior1);
             warrior1 = new Legionary();
-            battlefield.Add(warrior1);
+            tournament.Add(warrior1);
             warrior1 = new Cataphract();
-            battlefield.Add(warrior1);
-            foreach (Soldier warrior in battlefield)
+            tournament.Add(warrior1);
+            foreach (Soldier warrior in tournament)
             {
                 warrior.showInfo();
                 warrior.sayHello();
                 Console.WriteLine();
             }
-            while(battlefield.Count > 1)
+            while(tournament.Count > 1)
             {
-                Console.WriteLine("\nWho do you want to see fighting for glory? Enter the number of the first contestant!");
+                Console.WriteLine("\nWho do you want to see fighting for glory? Enter the number of the first contestant! (not id)");
                 while(true)
                 {
                     try
@@ -38,7 +38,7 @@ namespace Lab3
                     {
                         Console.WriteLine("Wrong input!");
                     }
-                    if (cont1 < 1 || cont1 > battlefield.Count)
+                    if (cont1 < 1 || cont1 > tournament.Count)
                     {
                         Console.WriteLine("Try again");
                     }
@@ -47,7 +47,7 @@ namespace Lab3
                         break;
                     }
                 }
-                Console.WriteLine("Enter the number of the second contestant!");
+                Console.WriteLine("Enter the number of the second contestant! (not id)");
                 while (true)
                 {
                     try
@@ -58,7 +58,7 @@ namespace Lab3
                     {
                         Console.WriteLine("Wrong input!");
                     }
-                    if (cont2 < 1 || cont2 > battlefield.Count || cont2 == cont1)
+                    if (cont2 < 1 || cont2 > tournament.Count || cont2 == cont1)
                     {
                         Console.WriteLine("Try again");
                     }
@@ -73,31 +73,31 @@ namespace Lab3
 
                 int count = 0;
 
-                while(battlefield[cont1].isAlive && battlefield[cont2].isAlive)
+                while(tournament[cont1].isAlive && tournament[cont2].isAlive)
                 {
                     count++;
                     
-                    battlefield[cont2].gethit(battlefield[cont1].attack());if (count == 10)
+                    tournament[cont2].gethit(tournament[cont1].attack());if (count == 10)
                     {
-                        battlefield[cont2].isAlive = false;
+                        tournament[cont2].isAlive = false;
                         Console.WriteLine("\nThe warriors got tired and the second contestant gave up");
                     }
                     Console.WriteLine();
-                    if (battlefield[cont2].isAlive)
+                    if (tournament[cont2].isAlive)
                     {
-                        battlefield[cont1].gethit(battlefield[cont2].attack());
+                        tournament[cont1].gethit(tournament[cont2].attack());
                     }
                 }
-                if (!battlefield[cont1].isAlive)
+                if (!tournament[cont1].isAlive)
                 {
-                    battlefield.RemoveAt(cont1);
+                    tournament.RemoveAt(cont1);
                 }
                 else
-                if (!battlefield[cont2].isAlive)
+                if (!tournament[cont2].isAlive)
                 {
-                    battlefield.RemoveAt(cont2);
+                    tournament.RemoveAt(cont2);
                 }
-                if (battlefield.Count < 2)
+                if (tournament.Count < 2)
                 {
                     Console.WriteLine("HEY!\n Seems like you running out fighters, aren't you?\nWanna add some more fresh meat?\n\n" +
                         "1) Yes\n" +
@@ -117,7 +117,7 @@ namespace Lab3
                                         warrior1 = new Spearman();
                                         warrior1.showInfo();
                                         warrior1.sayHello();
-                                        battlefield.Add(warrior1);
+                                        tournament.Add(warrior1);
                                         quit = true;
                                         break;
                                     }
@@ -126,7 +126,7 @@ namespace Lab3
                                         warrior1 = new Legionary();
                                         warrior1.showInfo();
                                         warrior1.sayHello();
-                                        battlefield.Add(warrior1);
+                                        tournament.Add(warrior1);
                                         quit = true;
                                         break;
                                     }
@@ -135,7 +135,7 @@ namespace Lab3
                                         warrior1 = new Cataphract();
                                         warrior1.showInfo();
                                         warrior1.sayHello();
-                                        battlefield.Add(warrior1);
+                                        tournament.Add(warrior1);
                                         quit = true;
                                         break;
                                     }
@@ -147,8 +147,13 @@ namespace Lab3
                         }
                     }
                 }
+                Console.WriteLine("\n" + new string('-', 30) + "\n");
+                foreach (Soldier soldier in tournament)
+                {
+                    soldier.showInfo();
+                }
             }
-            battlefield[0].gethit(battlefield[1].attack());
+            Console.WriteLine("\nAND THIS IS THE WINNER!");
             Console.ReadKey();
         }
     }
