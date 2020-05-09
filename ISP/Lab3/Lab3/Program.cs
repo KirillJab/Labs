@@ -61,7 +61,7 @@ namespace Lab3
                         {
                             Console.Clear();
                             person = new Human();
-                            Console.WriteLine(" " + person.name + " was added\n\n");
+                            Console.WriteLine(" " + person.Name + " was added\n\n");
                             people.Add(person);
                             break;
                         }
@@ -103,7 +103,7 @@ namespace Lab3
                             for (int i = 0; i < people.Count; i++)
                             {
                                 int j = i != people.Count - 1 ? i + 1 : 0;
-                                people[i].sayHello(people[j].name);
+                                people[i].sayHello(people[j].Name);
                             }
                             Console.WriteLine("\n\n");
                             break;

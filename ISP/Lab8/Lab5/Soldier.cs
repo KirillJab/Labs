@@ -19,7 +19,6 @@ namespace Lab3
 			Died?.Invoke(dead);
 		}
 
-
 		public enum Qualities
 		{
 			Legendary,
@@ -37,61 +36,61 @@ namespace Lab3
 			Khuzaits,
 			Vlandia
 		};
-		public static int number = 0;
-		public int tier { get; set; }
-		public int curhp { get; set; }
-		public int damage { get; set; }
-		public int armour { get; set; }
-		public int speed { get; set; }
-		public bool isAlive { get; set; }
-		public int seqnumber { get; set; }
-		public Qualities quality { get; set; }
-		public Kingdoms banner { get; set; }
+		public static int Number = 0;
+		public int Tier { get; set; }
+		public int Curhp { get; set; }
+		public int Damage { get; set; }
+		public int Armor { get; set; }
+		public int Speed { get; set; }
+		public bool IsAlive { get; set; }
+		public int Seqnumber { get; set; }
+		public Qualities Quality { get; set; }
+		public Kingdoms Banner { get; set; }
 
 		// CONSTRUCTORS
 		public Soldier() : base()
 		{
-			number++;
-			seqnumber = number;
+			Number++;
+			Seqnumber = Number;
 			Random rand = new Random((int)DateTime.Now.Ticks);
-			name = Names[(number + rand.Next(0, 10)) % 11];
-			damage = rand.Next(30, 115);
-			armour = rand.Next(10, 55);
-			speed = rand.Next(10, 55);
-			tier = (damage + armour) / 40;
-			quality = Qualities.Legendary;
-			banner = Kingdoms.Empire;
-			curhp = hp;
-			isAlive = true;
+			Name = Names[(Number + rand.Next(0, 10)) % 11];
+			Damage = rand.Next(30, 115);
+			Armor = rand.Next(10, 55);
+			Speed = rand.Next(10, 55);
+			Tier = (Damage + Armor) / 40;
+			Quality = Qualities.Legendary;
+			Banner = Kingdoms.Empire;
+			Curhp = Hp;
+			IsAlive = true;
 			Thread.Sleep(1);
 		}
 
 		public Soldier(string _name, int _age, Genders _gender, int _damage, int _armour, int _speed, Qualities _quality, Kingdoms _banner) : base(_name, _age, _gender)
 		{
-			number++;
-			seqnumber = number;
-			damage = _damage;
-			armour = _armour;
-			speed = _speed;
-			tier = (damage + armour) / 40;
-			quality = _quality;
-			banner = _banner;
-			isAlive = true;
+			Number++;
+			Seqnumber = Number;
+			Damage = _damage;
+			Armor = _armour;
+			Speed = _speed;
+			Tier = (Damage + Armor) / 40;
+			Quality = _quality;
+			Banner = _banner;
+			IsAlive = true;
 		}
 
 		// METHODS
 		public override void showInfo()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
-				Console.WriteLine(seqnumber + ")" + name + ": I am " + age + " year old " + tier + " tier " + quality + " soldier of the " + banner + ". I can deal " + damage + " damage and have " + armour + " armour");
+				Console.WriteLine(Seqnumber + ")" + Name + ": I am " + Age + " year old " + Tier + " tier " + Quality + " soldier of the " + Banner + ". I can deal " + Damage + " damage and have " + Armor + " armour");
 			}
 		}
 		public virtual void showHp()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
-				Console.WriteLine(name + " " + tier + " tier " + quality + " soldier of the " + banner + " is  " + curhp + "/" + hp);
+				Console.WriteLine(Name + " " + Tier + " tier " + Quality + " soldier of the " + Banner + " is  " + Curhp + "/" + Hp);
 			}
 		}
 
@@ -104,9 +103,9 @@ namespace Lab3
 			Soldier p = obj as Soldier;
 			if (p != null)
 			{
-				if (this.damage < p.damage)
+				if (this.Damage < p.Damage)
 					return -1;
-				if (this.damage > p.damage)
+				if (this.Damage > p.Damage)
 					return 1;
 				return 0;
 			}

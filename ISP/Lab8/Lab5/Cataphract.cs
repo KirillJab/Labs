@@ -11,47 +11,47 @@ namespace Lab3
 		public Cataphract() : base()
 		{
 			Random rand = new Random((int)DateTime.Now.Ticks);
-			speed = rand.Next(15, 55);
-			damage = rand.Next(30, 65);
-			armour = rand.Next(27, 30);
-			tier = (damage + armour) / 30;
-			quality = (Qualities)rand.Next(0, 7);
-			banner = (Kingdoms)rand.Next(0, 4);
+			Speed = rand.Next(15, 55);
+			Damage = rand.Next(30, 65);
+			Armor = rand.Next(27, 30);
+			Tier = (Damage + Armor) / 30;
+			Quality = (Qualities)rand.Next(0, 7);
+			Banner = (Kingdoms)rand.Next(0, 4);
 
 			horseSpeed = 100;
 		}
-		public Cataphract(string _name, int _age, Genders _gender, int _damage, int _armour, int _speed, int _horseSpeed, Qualities _quality, Kingdoms _banner) : base(_name, _age, _gender, _damage, _armour, _speed, _quality, _banner)
+		public Cataphract(string name, int age, Genders gender, int damage, int armour, int speed, int horseSpeed, Qualities quality, Kingdoms banner) : base(name, age, gender, damage, armour, speed, quality, banner)
 		{
-			horseSpeed = _horseSpeed;
+			this.horseSpeed = horseSpeed;
 		}
 
 		//METHODS
 		public override int attack()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
 				Random rand = new Random();
-				int hit = damage + speed / 5 + horseSpeed / 5;
+				int hit = Damage + Speed / 5 + horseSpeed / 5;
 				if (rand.Next(0, 10) == 1)
 				{
-					hit += damage / 2;
+					hit += Damage / 2;
 				}
-				Console.Write("\n" + quality + " Cataphract dealed " + hit + " damage to");
+				Console.Write("\n" + Quality + " Cataphract dealed " + hit + " damage to");
 				return hit;
 			}
 			return 0;
 		}
 		public override void gethit(int hit)
 		{
-			hit -= armour;
-			Console.WriteLine(" " + quality + " Cataphract. Armour blocked " + armour + " damage");
+			hit -= Armor;
+			Console.WriteLine(" " + Quality + " Cataphract. Armour blocked " + Armor + " damage");
 			if (hit > 0)
 			{
-				curhp -= hit;
+				Curhp -= hit;
 			}
-			if (curhp < 1)
+			if (Curhp < 1)
 			{
-				isAlive = false;
+				IsAlive = false;
 			}
 			heal();
 			showHp();
@@ -64,18 +64,19 @@ namespace Lab3
 
 		public override void showInfo()
 		{
-			Console.WriteLine(seqnumber + ")" + name + ": I am " + age + " year old " + tier + " tier " + quality + " Cataphract of the " + banner + ". I can deal minimum of " + damage + " damage and have " + armour + " armour");
+			Console.WriteLine(Seqnumber + ")" + Name + ": I am " + Age + " year old " + Tier + " tier " + Quality + " Cataphract of the " + Banner + ". I can deal minimum of " + Damage + " damage and have " + Armor + " armour");
 		}
 
 		public override void showHp()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
-				Console.WriteLine(name + " the " + quality + " Cataphract of the " + banner + " is " + curhp + "/" + hp);
+				Console.WriteLine(Name + " the " + Quality + " Cataphract of the " + Banner + " is " + Curhp + "/" + Hp);
 			}
 			else
 			{
-				Console.WriteLine(name + " the " + quality + " Cataphract of the " + banner + " is DEAD\n");
+				Console.WriteLine(Name + " the " + Quality + " Cataphract of the " + Banner + " is DEAD\n\n");
+				OnDied(this);
 			}
 		}
 	}

@@ -21,13 +21,13 @@ namespace Lab3
                 if (rand.Next(0, 10) == 0)
                 {
                     warrior = new Spearman("Garold", 22, Human.Genders.Male, 100, 100, 100, 100, Soldier.Qualities.Heavy, Soldier.Kingdoms.Empire);
-                    warrior.isAlive = false;
+                    warrior.IsAlive = false;
                 }
                 else
                 {
                     warrior = new Spearman();
                 }
-                if (warrior.isAlive)
+                if (warrior.IsAlive)
                 {
                     tournament.Add(warrior);
                 }
@@ -110,45 +110,45 @@ namespace Lab3
                 cont2--;
                 int count = 0;
 
-                while (tournament[cont1].isAlive && tournament[cont2].isAlive)
+                while (tournament[cont1].IsAlive && tournament[cont2].IsAlive)
                 {
                     count++;
                     tournament[cont2].gethit(tournament[cont1].attack());
                     if (count == 10)
                     {
-                        if (tournament[cont2].curhp < tournament[cont1].curhp)
+                        if (tournament[cont2].Curhp < tournament[cont1].Curhp)
                         {
-                            tournament[cont2].isAlive = false;
+                            tournament[cont2].IsAlive = false;
                             Console.WriteLine("\nThe warriors got tired and the second contestant gave up");
                         }
                         else
                         {
-                            tournament[cont1].isAlive = false;
+                            tournament[cont1].IsAlive = false;
                             Console.WriteLine("\nThe warriors got tired and the first contestant gave up");
                         }
                     }
                     Console.WriteLine();
-                    if (tournament[cont2].isAlive)
+                    if (tournament[cont2].IsAlive)
                     {
                         tournament[cont1].gethit(tournament[cont2].attack());
                     }
                     Thread.Sleep(500);
                 }
-                if (!tournament[cont1].isAlive)
+                if (!tournament[cont1].IsAlive)
                 {
                     tournament[cont1].Died += delegate (Soldier dead)
                     {
-                        Console.WriteLine(dead.name + " (" + dead.age + "): AAARGH!...\n");
+                        Console.WriteLine(dead.Name + " (" + dead.Age + "): AAARGH!...\n");
                     };
                     tournament[cont1].OnDied(tournament[cont1]);
                     tournament.RemoveAt(cont1);
                 }
                 else
-                if (!tournament[cont2].isAlive)
+                if (!tournament[cont2].IsAlive)
                 {
                     tournament[cont2].Died += delegate (Soldier dead)
                     {
-                        Console.WriteLine(dead.name + " (" + dead.age + "): AAARGH!...\n");
+                        Console.WriteLine(dead.Name + " (" + dead.Age + "): AAARGH!...\n");
                     };
                     tournament[cont2].OnDied(tournament[cont2]);
                     tournament.RemoveAt(cont2);
@@ -211,7 +211,7 @@ namespace Lab3
                 }
             }
             //EVENT WITH LAMBDA-EXPRESSION CALLING
-            Soldier.Win += (dead) => Console.WriteLine("\n" + new string('-', 30) + "\n\n" + dead.name + " (" + dead.age + "): HOOORAAAAY!!! I am the WINNER in todays tournament!!!!"+ "\n\n" + new string('-', 30));
+            Soldier.Win += (dead) => Console.WriteLine("\n" + new string('-', 30) + "\n\n" + dead.Name + " (" + dead.Age + "): HOOORAAAAY!!! I am the WINNER in todays tournament!!!!"+ "\n\n" + new string('-', 30));
             Soldier.OnWin(tournament[0]);
             Console.ReadKey();
         }

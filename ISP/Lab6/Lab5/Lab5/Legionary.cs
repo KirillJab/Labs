@@ -11,57 +11,57 @@ namespace Lab3
 		public Legionary() : base()
 		{
 			Random rand = new Random((int)DateTime.Now.Ticks);
-			speed = rand.Next(5, 25);
-			damage = rand.Next(30, 45);
-			armour = rand.Next(20, 35);
-			tier = (damage + armour) / 20;
-			quality = (Qualities)rand.Next(0, 7);
-			banner = (Kingdoms)rand.Next(0, 4);
+			Speed = rand.Next(5, 25);
+			Damage = rand.Next(30, 45);
+			Armor = rand.Next(20, 35);
+			Tier = (Damage + Armor) / 20;
+			Quality = (Qualities)rand.Next(0, 7);
+			Banner = (Kingdoms)rand.Next(0, 4);
 
 			shieldArmour = 20;
 		}
-		public Legionary(string _name, int _age, Genders _gender, int _damage, int _armour, int _speed, int _shieldArmour, Qualities _quality, Kingdoms _banner) : base(_name, _age, _gender, _damage, _armour, _speed, _quality, _banner)
+		public Legionary(string name, int age, Genders gender, int damage, int armour, int speed, int shieldArmour, Qualities quality, Kingdoms banner) : base(name, age, gender, damage, armour, speed, quality, banner)
 		{
-			shieldArmour = _shieldArmour;
+			this.shieldArmour = shieldArmour;
 		}
 
 		//METHODS
 		public override int attack()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
 				Random rand = new Random();
-				int hit = damage + speed / 5;
+				int hit = Damage + Speed / 5;
 				if (rand.Next(0, 10) == 1)
 				{
-					hit += damage / 2;
+					hit += Damage / 2;
 				}
-				Console.Write("\n" + quality + " Legionary dealed " + hit + " damage to");
+				Console.Write("\n" + Quality + " Legionary dealed " + hit + " damage to");
 				return hit;
 			}
 			return 0;
 		}
 		public override void gethit(int hit)
 		{
-			hit -= armour + shieldArmour;
-			Console.WriteLine(" " + quality + " Legioanry. Armour and shield blocked " + (armour + shieldArmour) + " damage");
+			hit -= Armor + shieldArmour;
+			Console.WriteLine(" " + Quality + " Legioanry. Armour and shield blocked " + (Armor + shieldArmour) + " damage");
 			if (hit > 0)
 			{
-				curhp -= hit;
+				Curhp -= hit;
 			}
-			if (curhp < 1)
+			if (Curhp < 1)
 			{
-				isAlive = false;
+				IsAlive = false;
 			}
 			heal();
 		}
 
 		public void heal()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
-				int healed = curhp + 5 > hp ? hp - curhp : 5;
-				curhp += healed;
+				int healed = Curhp + 5 > Hp ? Hp - Curhp : 5;
+				Curhp += healed;
 				Console.WriteLine("Healed " + healed);
 			}
 			showHp();
@@ -69,18 +69,18 @@ namespace Lab3
 
 		public override void showInfo()
 		{
-			Console.WriteLine(seqnumber + ")" + name + ": I am " + age + " year old " + tier + " tier " + quality + " Legionary of the " + banner + ". I can deal minimum of " + damage + " damage and have " + armour + " armour");
+			Console.WriteLine(Seqnumber + ")" + Name + ": I am " + Age + " year old " + Tier + " tier " + Quality + " Legionary of the " + Banner + ". I can deal minimum of " + Damage + " damage and have " + Armor + " armour");
 		}
 
 		public override void showHp()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
-				Console.WriteLine(name + " the " + tier + " tier " + quality + " Legionary of the " + banner + " is " + curhp + "/" + hp);
+				Console.WriteLine(Name + " the " + Tier + " tier " + Quality + " Legionary of the " + Banner + " is " + Curhp + "/" + Hp);
 			}
 			else
 			{
-				Console.WriteLine(name + " the " + tier + " tier " + quality + " Legionary of the " + banner + " is DEAD\n\n");
+				Console.WriteLine(Name + " the " + Tier + " tier " + Quality + " Legionary of the " + Banner + " is DEAD\n\n");
 			}
 		}
 	}

@@ -73,27 +73,27 @@ namespace Lab3
 
                 int count = 0;
 
-                while(tournament[cont1].isAlive && tournament[cont2].isAlive)
+                while(tournament[cont1].IsAlive && tournament[cont2].IsAlive)
                 {
                     count++;
                     
                     tournament[cont2].gethit(tournament[cont1].attack());if (count == 10)
                     {
-                        tournament[cont2].isAlive = false;
+                        tournament[cont2].IsAlive = false;
                         Console.WriteLine("\nThe warriors got tired and the second contestant gave up");
                     }
                     Console.WriteLine();
-                    if (tournament[cont2].isAlive)
+                    if (tournament[cont2].IsAlive)
                     {
                         tournament[cont1].gethit(tournament[cont2].attack());
                     }
                 }
-                if (!tournament[cont1].isAlive)
+                if (!tournament[cont1].IsAlive)
                 {
                     tournament.RemoveAt(cont1);
                 }
                 else
-                if (!tournament[cont2].isAlive)
+                if (!tournament[cont2].IsAlive)
                 {
                     tournament.RemoveAt(cont2);
                 }

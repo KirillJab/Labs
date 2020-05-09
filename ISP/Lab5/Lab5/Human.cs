@@ -8,9 +8,9 @@ namespace Lab3
 
 		public string[] Names = new string[] { "John", "Ivan", "Paul", "Arthur", "Edward", "Wladzislaw", "Gravet", "Jaroglek", "Ulrich", "Gotfrid", "Robert" };
 		public string[] GirlNames = new string[] { "Johnana", "Ivana", "Paula", "Veronica", "Milena", "Wladzislawa", "Ksenia", "Jana", "Ulya", "Gerda", "Roberta" };
-		public int hp { get; set; }
-		public int age { get; set; }
-		public string name { get; set; }
+		public int Hp { get; set; }
+		public int Age { get; set; }
+		public string Name { get; set; }
 		static int count = 0;
 		int id { get; }
 		Genders gender { get; set; }
@@ -20,19 +20,19 @@ namespace Lab3
 		public Human()
 		{
 			Random rand = new Random((int)DateTime.Now.Ticks);
-			hp = 100;
-			age = rand.Next(16, 41);
+			Hp = 100;
+			Age = rand.Next(16, 41);
 			gender = (Genders)rand.Next(0, 2);
-			name = gender == Genders.Male ? Names[rand.Next(0, 11)] : GirlNames[rand.Next(0, 11)];
+			Name = gender == Genders.Male ? Names[rand.Next(0, 11)] : GirlNames[rand.Next(0, 11)];
 			count++;
 			id = count;
 		}
-		public Human(string _name, int _age, Genders _gender)
+		public Human(string name, int age, Genders gender1)
 		{
-			hp = 100;
-			name = _name;
-			age = _age;
-			gender = _gender;
+			Hp = 100;
+			Name = name;
+			Age = age;
+			gender = gender1;
 			count++;
 			id = count;
 		}
@@ -40,29 +40,29 @@ namespace Lab3
 		// METHODS
 		public void sayHello()
 		{
-			Console.WriteLine(name + " (" + age + "): Hello everyone!");
+			Console.WriteLine(Name + " (" + Age + "): Hello everyone!");
 		}
 		public void sayHello(string toName)
 		{
-			Console.WriteLine(name + " (" + age + "): Hello, " + toName + " !");
+			Console.WriteLine(Name + " (" + Age + "): Hello, " + toName + " !");
 		}
 
 		public virtual void showInfo()
 		{
-			Console.WriteLine(" " + id + ") " + name + " is " + age + " years old, has " + hp + "hp and is " + gender.ToString());
+			Console.WriteLine(" " + id + ") " + Name + " is " + Age + " years old, has " + Hp + "hp and is " + gender.ToString());
 		}
 
 		public Human setInfo()
 		{
 			Human person = new Human();
 			Console.WriteLine("Name: ");
-			person.name = Console.ReadLine();
+			person.Name = Console.ReadLine();
 			Console.WriteLine("Age: ");
 			while (true)
 			{
 				try
 				{
-					person.age = int.Parse(Console.ReadLine());
+					person.Age = int.Parse(Console.ReadLine());
 					break;
 				}
 				catch

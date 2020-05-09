@@ -4,39 +4,39 @@ namespace Lab3
 {
 	public class Spearman : Soldier, IHeal
 	{
-		int spearlength { get; set; }
+		int spearLength { get; set; }
 
 
 		// CONSTRUCTORS
 		public Spearman() : base()
 		{
 			Random rand = new Random((int)DateTime.Now.Ticks);
-			speed = rand.Next(10, 35);
-			damage = rand.Next(30, 45);
-			armour = rand.Next(10, 25);
-			tier = (damage + armour) / 40;
-			quality = (Qualities)rand.Next(0, 7);
-			banner = (Kingdoms)rand.Next(0, 4);
+			Speed = rand.Next(10, 35);
+			Damage = rand.Next(30, 45);
+			Armor = rand.Next(10, 25);
+			Tier = (Damage + Armor) / 40;
+			Quality = (Qualities)rand.Next(0, 7);
+			Banner = (Kingdoms)rand.Next(0, 4);
 
-			spearlength = 180;
+			spearLength = 180;
 		}
-		public Spearman(string _name, int _age, Genders _gender, int _damage, int _armour, int _speed, int _spearlength, Qualities _quality, Kingdoms _banner) : base(_name, _age, _gender, _damage, _armour, _speed, _quality, _banner)
+		public Spearman(string name, int age, Genders gender, int damage, int armour, int speed, int spearLength, Qualities quality, Kingdoms banner) : base(name, age, gender, damage, armour, speed, quality, banner)
 		{
-			spearlength = _spearlength;
+			this.spearLength = spearLength;
 		}
 
 		//METHODS
 		public override int attack()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
 				Random rand = new Random();
-				int hit = damage + speed / 5 + spearlength / 20;
+				int hit = Damage + Speed / 5 + spearLength / 20;
 				if (rand.Next(0, 4) == 3)
 				{
-					hit += damage / 2;
+					hit += Damage / 2;
 				}
-				Console.Write("\n" + quality + " Spearman dealed " + hit + " damage to");
+				Console.Write("\n" + Quality + " Spearman dealed " + hit + " damage to");
 				return hit;
 			}
 			return 0;
@@ -44,25 +44,25 @@ namespace Lab3
 
 		public override void gethit(int hit)
 		{
-			hit -= armour;
-			Console.WriteLine(" " + quality + " Spearman. Armour blocked " + armour + " damage");
+			hit -= Armor;
+			Console.WriteLine(" " + Quality + " Spearman. Armour blocked " + Armor + " damage");
 			if (hit > 0)
 			{
-				curhp -= hit;
+				Curhp -= hit;
 			}
-			if (curhp < 1)
+			if (Curhp < 1)
 			{
-				isAlive = false;
+				IsAlive = false;
 			}
 			heal();
 		}
 
 		public void heal()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
-				int healed = curhp + 5 > hp ? hp - curhp : 5;
-				curhp += healed;
+				int healed = Curhp + 5 > Hp ? Hp - Curhp : 5;
+				Curhp += healed;
 				Console.WriteLine("Healed " + healed);
 			}
 			showHp();
@@ -70,18 +70,18 @@ namespace Lab3
 
 		public override void showInfo()
 		{
-			Console.WriteLine(seqnumber + ")" + name + ": I am " + age + " year old " + tier + " tier " + quality + " Spearman of the " + banner + ". I can deal minimum of " + damage + " damage and have " + armour + " armour");
+			Console.WriteLine(Seqnumber + ")" + Name + ": I am " + Age + " year old " + Tier + " tier " + Quality + " Spearman of the " + Banner + ". I can deal minimum of " + Damage + " damage and have " + Armor + " armour");
 		}
 
 		public override void showHp()
 		{
-			if (isAlive)
+			if (IsAlive)
 			{
-				Console.WriteLine(name + " the " + quality + " Spearman of the " + banner + " is " + curhp + "/" + hp);
+				Console.WriteLine(Name + " the " + Quality + " Spearman of the " + Banner + " is " + Curhp + "/" + Hp);
 			}
 			else
 			{
-				Console.WriteLine(name + " the " + quality + " Spearman of the " + banner + " is DEAD\n");
+				Console.WriteLine(Name + " the " + Quality + " Spearman of the " + Banner + " is DEAD\n\n");
 				OnDied(this);
 			}
 		}
