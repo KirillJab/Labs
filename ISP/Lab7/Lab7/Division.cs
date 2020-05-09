@@ -40,15 +40,61 @@ namespace Lab7
 
             if (matches.Count == 1)
             {
-                try
-                {
-                    string str = matches[0].ToString();
-                    string[] nums = str.Split(new char[] { '/' });
+                long num;
+                long den;
+                string str = matches[0].ToString();
+                string[] nums = str.Split(new char[] { '/' });
 
-                    return new Division(long.Parse(nums[0]), long.Parse(nums[1]));
-                    
+                checked
+                {
+                    num = long.Parse(nums[0]);
+                    den = long.Parse(nums[1]);
                 }
-                catch { }
+                return new Division(num, den);
+            }
+
+            rx = new Regex(@"-?\d+\,\d+");
+            matches = rx.Matches(input);
+
+            if (matches.Count == 1)
+            {
+                long num;
+                long den;
+                string str = matches[0].ToString();
+                string[] nums = str.Split(new char[] { ',' });
+
+                num = long.Parse(nums[0]);
+                den = 1;
+
+                for (int i = 0; i < nums[1].Length; i++)
+                {
+                    num *= 10;
+                    den *= 10;
+                    num += nums[1][i] - 48;
+                }
+                return new Division(num, den);
+            }
+
+            rx = new Regex(@"-?\d+\.\d+");
+            matches = rx.Matches(input);
+
+            if (matches.Count == 1)
+            {
+                long num;
+                long den;
+                string str = matches[0].ToString();
+                string[] nums = str.Split(new char[] { ',' });
+
+                num = long.Parse(nums[0]);
+                den = 1;
+
+                for (int i = 0; i < nums[1].Length; i++)
+                {
+                    num *= 10;
+                    den *= 10;
+                    num += nums[1][i] - 48;
+                }
+                return new Division(num, den);
             }
 
             rx = new Regex(@"-?\d+");
@@ -56,13 +102,18 @@ namespace Lab7
 
             if (matches.Count == 2)
             {
-                try
+                long num;
+                long den;
+
+                checked
                 {
-                    Console.WriteLine("ASD");
-                    return new Division(long.Parse(matches[0].Value), long.Parse(matches[1].Value));
+                    num = long.Parse(matches[0].Value);
+                    den = long.Parse(matches[1].Value);
                 }
-                catch { }
+                return new Division(num, den);
             }
+
+
             return null;
         }
 
@@ -111,8 +162,50 @@ namespace Lab7
             gcd = GCD(fraction.Numerator, fraction.Denominator);
             return new Division(fraction.Numerator / gcd, fraction.Denominator / gcd);
         }
-
-
+        public static Division operator +(Division a, long b)
+        {
+            long num;
+            long den;
+            checked
+            {
+                num = a.Numerator + b * a.Denominator;
+                den = a.Denominator;
+            }
+            return new Division(num, den);
+        }
+        public static Division operator -(Division a, long b)
+        {
+            long num;
+            long den;
+            checked
+            {
+                num = a.Numerator - b * a.Denominator;
+                den = a.Denominator;
+            }
+            return new Division(num, den);
+        }
+        public static Division operator *(Division a, long b)
+        {
+            long num;
+            long den;
+            checked
+            {
+                num = a.Numerator * b;
+                den = a.Denominator;
+            }
+            return new Division(num, den);
+        }
+        public static Division operator /(Division a, long b)
+        {
+            long num;
+            long den;
+            checked
+            {
+                num = a.Numerator;
+                den = a.Denominator * b;
+            }
+            return new Division(num, den);
+        }
         public static Division operator +(Division a, Division b)
         {
             long num;
@@ -124,7 +217,6 @@ namespace Lab7
             }
             return new Division(num, den);
         }
-
         public static Division operator -(Division a, Division b)
         {
             long num;
@@ -136,7 +228,6 @@ namespace Lab7
             }
             return new Division(num, den);
         }
-
         public static Division operator *(Division a, Division b)
         {
             long num;
@@ -148,18 +239,70 @@ namespace Lab7
             }
             return new Division(num, den);
         }
-
         public static Division operator /(Division a, Division b)
         {
             long num;
             long den;
-
             checked
             {
                 num = a.Numerator * b.Denominator;
                 den = a.Denominator * b.Numerator;
             }
             return new Division(num, den);
+        }
+        public static Division operator -(Division a)
+        {
+            return new Division(-a.Numerator, a.Denominator);
+        }
+        public static Division operator ++(Division a)
+        {
+            return a + 1;
+        }
+        public static Division operator --(Division a)
+        {
+            return a - 1;
+        }
+
+        public static bool operator <(Division a, Division b)
+        {
+            return a.Compare(b) == -1;
+        }
+        public static bool operator >(Division a, Division b)
+        {
+            return a.Compare(b) == 1;
+        }
+        public static bool operator ==(Division a, Division b)
+        {
+            return a.Compare(b) == 0;
+        }
+        public static bool operator !=(Division a, Division b)
+        {
+            return a.Compare(b) != 0;
+        }
+        public static bool operator >=(Division a, Division b)
+        {
+            return !(a < b);
+        }
+        public static bool operator <=(Division a, Division b)
+        {
+            return !(a > b);
+        }
+
+        public static implicit operator long(Division a)
+        {
+            return a.Numerator / a.Denominator;
+        }
+        public static implicit operator float(Division a)
+        {
+            return a.Numerator / (float)a.Denominator;
+        }
+        public static implicit operator double(Division a)
+        {
+            return a.Numerator / (double)a.Denominator;
+        }
+        public static implicit operator decimal(Division a)
+        {
+            return a.Numerator / (decimal)a.Denominator;
         }
 
         public override string ToString()
@@ -180,9 +323,26 @@ namespace Lab7
                         {
                             return Numerator.ToString();
                         }
-                        break;
                     }
-                case 'i':
+                case 'S':
+                    {
+                        if (Denominator != 1 && Numerator != 0)
+                        {
+                            if (Numerator / Denominator >= 1)
+                            {
+                                return Numerator / Denominator + "(" + Numerator % Denominator + "/" + Denominator + ")";
+                            }
+                            else
+                            {
+                                return Numerator + "/" + Denominator;
+                            }
+                        }
+                        else
+                        {
+                            return Numerator.ToString();
+                        }
+                    }
+                case 'd':
                     {
                         if (Denominator != 1 && Numerator != 0)
                         {
@@ -192,21 +352,19 @@ namespace Lab7
                         {
                             return Numerator.ToString();
                         }
-                        break;
                     }
                 case 'f':
                     {
                         if (Denominator != 1 && Numerator != 0)
                         {
-                            return (Numerator / (float) Denominator).ToString();
+                            return (Numerator / (float)Denominator).ToString();
                         }
                         else
                         {
                             return Numerator.ToString();
                         }
-                        break;
                     }
-                case 'd':
+                case 'F':
                     {
                         if (Denominator != 1 && Numerator != 0)
                         {
@@ -216,7 +374,6 @@ namespace Lab7
                         {
                             return Numerator.ToString();
                         }
-                        break;
                     }
                 case 'D':
                     {
@@ -228,15 +385,15 @@ namespace Lab7
                         {
                             return Numerator.ToString();
                         }
-                        break;
                     }
                 default:
                     {
-                        throw new Exception("Unkown type");
-                        break;
+                        throw new FormatException("Unkown type \"" + type + "\"");
                     }
             }
-            return null;
         }
+
+       
+        
     }
 }
