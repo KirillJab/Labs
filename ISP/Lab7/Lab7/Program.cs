@@ -11,8 +11,8 @@ namespace Lab7
             Division b;
             Division[] mas = new Division[15];
 
-            a = Division.Parse("1,125");
-            b = Division.Parse("4/3");
+            a = Division.Parse("-1,125");
+            b = Division.Parse("-4/-3");
             Console.WriteLine("a = " + a + " = " + a + " = " + a.ToString('d') + " = " + a.ToString('f') + " = " + a.ToString('F') + " = " + a.ToString('D'));
             Console.WriteLine("a++;");
             a++;
