@@ -54,7 +54,7 @@ namespace Lab3
                     case '1':
                         {
                             Console.Clear();
-                            people.Add(person.setInfo());
+                            people.Add(person.SetInfo());
                             break;
                         }
                     case '2':
@@ -72,7 +72,7 @@ namespace Lab3
                             {
                                 Console.WriteLine();
                                 Console.WriteLine("id");
-                                people.ForEach(humanbeing => humanbeing.showInfo());
+                                people.ForEach(humanbeing => humanbeing.ShowInfo());
                                 Console.WriteLine("\n\n");
                             }
                             else
@@ -92,7 +92,7 @@ namespace Lab3
                         {
                             Console.Clear();
                             Console.WriteLine("Enter the index which you want to say hello: ");
-                            people[checkid(people.Count) - 1].sayHello();
+                            people[checkid(people.Count) - 1].SayHello();
                             Console.WriteLine();
                             break;
                         }
@@ -103,7 +103,7 @@ namespace Lab3
                             for (int i = 0; i < people.Count; i++)
                             {
                                 int j = i != people.Count - 1 ? i + 1 : 0;
-                                people[i].sayHello(people[j].Name);
+                                people[i].SayHello(people[j].Name);
                             }
                             Console.WriteLine("\n\n");
                             break;

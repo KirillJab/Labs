@@ -26,7 +26,7 @@ namespace Lab3
 		}
 
 		//METHODS
-		public override int attack()
+		public override int Attack()
 		{
 			if (IsAlive)
 			{
@@ -41,7 +41,7 @@ namespace Lab3
 			}
 			return 0;
 		}
-		public override void gethit(int hit)
+		public override void GetHit(int hit)
 		{
 			hit -= Armor;
 			Console.WriteLine(" " + Quality + " Cataphract. Armour blocked " + Armor + " damage");
@@ -53,21 +53,21 @@ namespace Lab3
 			{
 				IsAlive = false;
 			}
-			heal();
-			showHp();
+			Heal();
+			ShowHp();
 		}
 
-		public override void heal() //Won't heal, cause too OP
+		public override void Heal() //Won't heal, cause too OP
 		{
 
 		}
 
-		public override void showInfo()
+		public override void ShowInfo()
 		{
 			Console.WriteLine(Seqnumber + ")" + Name + ": I am " + Age + " year old " + Tier + " tier " + Quality + " Cataphract of the " + Banner + ". I can deal minimum of " + Damage + " damage and have " + Armor + " armour");
 		}
 
-		public override void showHp()
+		public override void ShowHp()
 		{
 			if (IsAlive)
 			{

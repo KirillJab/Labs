@@ -3,15 +3,63 @@
 #pragma hdrstop
 
 #include "Tool.h"
+#include <algorithm>
+#include <iostream>
+#include<vector>
+#include<sstream>
+#include<string>
+#include<iterator>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
-wchar_t* Tool::extract(wchar_t* inp)
+
+void Tool::FromString(string inp)
 {
-char out[100];
-size_t len = wcstombs(mtr, str, wcslen(str));
+	string buff;
+	int i = 0;
 
+	Available = 0;
+	Sold = 0;
 
-	return str;
+	for(; inp[i] != '\t'; i++)
+	{
+		GroupName += inp[i];
+	}
+	i++;
+	for(; inp[i] != '\t'; i++)
+	{
+		Name += inp[i];
+	}
+	i++;
+	buff = "";
+	for(; inp[i] != '\t'; i++)
+	{
+		Available *= 10;
+		Available += inp[i] - '0';
+	}
+	i++;
+	for(; inp[i] != '\t'; i++)
+	{
+		Sold *= 10;
+		Sold += inp[i] - '0';
+	}
+	i++;
+	for(; inp[i] != '\t'; i++)
+	{
+		Color += inp[i];
+	}
+	i++;
+	for(; inp[i] != '\0'; i++)
+	{
+		buff += inp[i];
+	}
+	if(buff == "Yes")
+	{
+		Delivery = true;
+	}
+	else
+	{
+		Delivery = false;
+	}
 }
 
 

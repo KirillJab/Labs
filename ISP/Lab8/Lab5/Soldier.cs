@@ -79,14 +79,14 @@ namespace Lab3
 		}
 
 		// METHODS
-		public override void showInfo()
+		public override void ShowInfo()
 		{
 			if (IsAlive)
 			{
 				Console.WriteLine(Seqnumber + ")" + Name + ": I am " + Age + " year old " + Tier + " tier " + Quality + " soldier of the " + Banner + ". I can deal " + Damage + " damage and have " + Armor + " armour");
 			}
 		}
-		public virtual void showHp()
+		public virtual void ShowHp()
 		{
 			if (IsAlive)
 			{
@@ -94,8 +94,8 @@ namespace Lab3
 			}
 		}
 
-		public abstract int attack();
-		public abstract void gethit(int hit);
+		public abstract int Attack();
+		public abstract void GetHit(int hit);
 
 
 		public int CompareTo(object obj)

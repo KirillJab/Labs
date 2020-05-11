@@ -45,21 +45,21 @@ namespace Lab3
 
             foreach (Soldier soldier in tournament)
             {
-                soldier.sayHello();
+                soldier.SayHello();
             }
             Console.WriteLine("\n" + new string('-', 30));
             Console.WriteLine("\nSoldiers sorted by damage: ");
             tournament.Sort();
             foreach (Soldier soldier in tournament)
             {
-                soldier.showInfo();
+                soldier.ShowInfo();
             }
             Console.WriteLine("\n" + new string('-', 30));
             Console.WriteLine("\nSoldiers sorted by id: ");
             tournament.Sort(new IdComparer());
             foreach (Soldier soldier in tournament)
             {
-                soldier.showInfo();
+                soldier.ShowInfo();
             }
 
 
@@ -113,7 +113,7 @@ namespace Lab3
                 while (tournament[cont1].IsAlive && tournament[cont2].IsAlive)
                 {
                     count++;
-                    tournament[cont2].gethit(tournament[cont1].attack());
+                    tournament[cont2].GetHit(tournament[cont1].Attack());
                     if (count == 10)
                     {
                         if (tournament[cont2].Curhp < tournament[cont1].Curhp)
@@ -130,7 +130,7 @@ namespace Lab3
                     Console.WriteLine();
                     if (tournament[cont2].IsAlive)
                     {
-                        tournament[cont1].gethit(tournament[cont2].attack());
+                        tournament[cont1].GetHit(tournament[cont2].Attack());
                     }
                     Thread.Sleep(500);
                 }
@@ -171,8 +171,8 @@ namespace Lab3
                                 case '1':
                                     {
                                         warrior = new Spearman();
-                                        warrior.showInfo();
-                                        warrior.sayHello();
+                                        warrior.ShowInfo();
+                                        warrior.SayHello();
                                         tournament.Add(warrior);
                                         quit = true;
                                         break;
@@ -180,8 +180,8 @@ namespace Lab3
                                 case '2':
                                     {
                                         warrior = new Legionary();
-                                        warrior.showInfo();
-                                        warrior.sayHello();
+                                        warrior.ShowInfo();
+                                        warrior.SayHello();
                                         tournament.Add(warrior);
                                         quit = true;
                                         break;
@@ -189,8 +189,8 @@ namespace Lab3
                                 case '3':
                                     {
                                         warrior = new Cataphract();
-                                        warrior.showInfo();
-                                        warrior.sayHello();
+                                        warrior.ShowInfo();
+                                        warrior.SayHello();
                                         tournament.Add(warrior);
                                         quit = true;
                                         break;
@@ -207,7 +207,7 @@ namespace Lab3
                 Console.WriteLine("\n" + new string('-', 30) + "\n");
                 foreach (Soldier soldier in tournament)
                 {
-                    soldier.showInfo();
+                    soldier.ShowInfo();
                 }
             }
             //EVENT WITH LAMBDA-EXPRESSION CALLING

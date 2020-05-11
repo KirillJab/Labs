@@ -54,11 +54,19 @@ Numb createNumber(int inpNum)
     return number;
 }
 
-void deleteNumber(Numb *number)
+void deleteDigit(Digit *digit)
 {
-    if (number->tail == NULL) return;
-    deleteNumber(number->tail);
-    number = NULL;
+    if (digit == NULL) return;
+    printf("1");
+    deleteDigit(digit->next);
+    digit = NULL;
+}
+
+void deleteNumber(Numb *numb)
+{
+    if (numb == NULL) return;
+    deleteDigit(numb->head->next);
+    numb->head = NULL;
 }
 
 int showNumber(Numb *number)
@@ -103,5 +111,6 @@ int main()
     Numb number = createNumber(num);
     showNumber(&number);
     printf(" is %d in binary ", convert(&number));
+    deleteNumber(&num);
     return 0;
 }

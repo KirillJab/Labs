@@ -1,0 +1,32 @@
+//---------------------------------------------------------------------------
+
+#include <string>
+using namespace std;
+#ifndef ToolH
+#define ToolH
+
+//---------------------------------------------------------------------------
+
+class Tool
+{
+	public:
+	int available = 0;
+	int sold = 0;
+	string groupName;
+	string name;
+	string color;
+	bool delivery = false;
+	Tool(int _available, int _sold, string _groupName, string _name, string _color, bool _delivery)
+	{
+		available = _available;
+		sold = _sold;
+		groupName = _groupName;
+		name = _name;
+		color = _color;
+        delivery = _delivery;
+	}
+    Tool (){}
+};
+
+
+#endif

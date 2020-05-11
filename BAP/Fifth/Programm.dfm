@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   Caption = 'Form1'
   ClientHeight = 299
-  ClientWidth = 635
+  ClientWidth = 840
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,36 +13,50 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object ListBox1: TListBox
+  object ListBox: TListBox
     Left = 8
     Top = 8
     Width = 338
     Height = 225
     ItemHeight = 13
     TabOrder = 0
+    OnClick = ListBoxClick
   end
-  object Button1: TButton
-    Left = 376
-    Top = 128
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
+  object InsertButton: TButton
+    Left = 368
+    Top = 160
+    Width = 105
+    Height = 34
+    Caption = 'Add Above Chosen'
+    Enabled = False
     TabOrder = 1
+    OnClick = InsertButtonClick
   end
-  object Button2: TButton
-    Left = 376
-    Top = 168
-    Width = 75
-    Height = 25
-    Caption = 'Button2'
+  object ExitButton: TButton
+    Left = 368
+    Top = 200
+    Width = 105
+    Height = 33
+    Caption = 'Exit'
     TabOrder = 2
+    OnClick = ExitButtonClick
   end
-  object Button3: TButton
-    Left = 376
-    Top = 207
-    Width = 75
-    Height = 25
-    Caption = 'Button3'
+  object ChooseButton: TButton
+    Left = 368
+    Top = 120
+    Width = 105
+    Height = 34
+    Caption = 'Save to buffer'
+    Enabled = False
     TabOrder = 3
+    OnClick = ChooseButtonClick
+  end
+  object MemoBuff: TMemo
+    Left = 494
+    Top = 8
+    Width = 338
+    Height = 225
+    ReadOnly = True
+    TabOrder = 4
   end
 end

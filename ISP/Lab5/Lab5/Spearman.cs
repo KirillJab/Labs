@@ -26,7 +26,7 @@ namespace Lab3
 		}
 
 		//METHODS
-		public override int attack()
+		public override int Attack()
 		{
 			if (IsAlive)
 			{
@@ -42,7 +42,7 @@ namespace Lab3
 			return 0;
 		}
 
-		public override void gethit(int hit)
+		public override void GetHit(int hit)
 		{
 			hit -= Armor;
 			Console.WriteLine(" " + Quality + " Spearman. Armour blocked " + Armor + " damage");
@@ -54,10 +54,10 @@ namespace Lab3
 			{
 				IsAlive = false;
 			}
-			heal();
+			Heal();
 		}
 
-		public override void heal()
+		public override void Heal()
 		{
 			if (IsAlive)
 			{
@@ -65,15 +65,15 @@ namespace Lab3
 				Curhp += healed;
 				Console.WriteLine("Healed " + healed);
 			}
-			showHp();
+			ShowHp();
 		}
 
-		public override void showInfo()
+		public override void ShowInfo()
 		{
 			Console.WriteLine(Seqnumber + ")" + Name + ": I am " + Age + " year old " + Tier + " tier " + Quality + " Spearman of the " + Banner + ". I can deal minimum of " + Damage + " damage and have " + Armor + " armour");
 		}
 
-		public override void showHp()
+		public override void ShowHp()
 		{
 			if (IsAlive)
 			{

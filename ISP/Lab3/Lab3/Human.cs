@@ -38,21 +38,21 @@ namespace Lab3
 		}
 
 		// METHODS
-		public void sayHello()
+		public void SayHello()
 		{
 			Console.WriteLine(Name + " (" + Age + "): Hello everyone!");
 		}
-		public void sayHello(string toName)
+		public void SayHello(string toName)
 		{
 			Console.WriteLine(Name + " (" + Age + "): Hello, " + toName + " !");
 		}
 
-		public void showInfo()
+		public void ShowInfo()
 		{
 			Console.WriteLine(" " + id + ") " + Name + " is " + Age + " years old, has " + Hp + "Hp and is " + gender.ToString());
 		}
 
-		public Human setInfo()
+		public Human SetInfo()
 		{
 			Human person = new Human();
 			Console.WriteLine("Name: ");

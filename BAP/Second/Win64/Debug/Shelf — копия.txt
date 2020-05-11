@@ -1,6 +1,0 @@
-Group Name          Name         Available         Sold         Color         Delivery
-
-Attachments         Door          12                    100          Red           Yes
-Attachments         Door          10                    10            Black         Yes
-Attachments         Door          11                    0              Green        No
-Attachments         Door          13                    9              Brown       Yes

@@ -21,8 +21,8 @@ namespace Lab3
             tournament.Add(warrior1);
             foreach (Soldier warrior in tournament)
             {
-                warrior.showInfo();
-                warrior.sayHello();
+                warrior.ShowInfo();
+                warrior.SayHello();
                 Console.WriteLine();
             }
             while(tournament.Count > 1)
@@ -77,7 +77,7 @@ namespace Lab3
                 {
                     count++;
                     
-                    tournament[cont2].gethit(tournament[cont1].attack());if (count == 10)
+                    tournament[cont2].GetHit(tournament[cont1].Attack());if (count == 10)
                     {
                         tournament[cont2].IsAlive = false;
                         Console.WriteLine("\nThe warriors got tired and the second contestant gave up");
@@ -85,7 +85,7 @@ namespace Lab3
                     Console.WriteLine();
                     if (tournament[cont2].IsAlive)
                     {
-                        tournament[cont1].gethit(tournament[cont2].attack());
+                        tournament[cont1].GetHit(tournament[cont2].Attack());
                     }
                 }
                 if (!tournament[cont1].IsAlive)
@@ -115,8 +115,8 @@ namespace Lab3
                                 case '1':
                                     {
                                         warrior1 = new Spearman();
-                                        warrior1.showInfo();
-                                        warrior1.sayHello();
+                                        warrior1.ShowInfo();
+                                        warrior1.SayHello();
                                         tournament.Add(warrior1);
                                         quit = true;
                                         break;
@@ -124,8 +124,8 @@ namespace Lab3
                                 case '2':
                                     {
                                         warrior1 = new Legionary();
-                                        warrior1.showInfo();
-                                        warrior1.sayHello();
+                                        warrior1.ShowInfo();
+                                        warrior1.SayHello();
                                         tournament.Add(warrior1);
                                         quit = true;
                                         break;
@@ -133,8 +133,8 @@ namespace Lab3
                                 case '3':
                                     {
                                         warrior1 = new Cataphract();
-                                        warrior1.showInfo();
-                                        warrior1.sayHello();
+                                        warrior1.ShowInfo();
+                                        warrior1.SayHello();
                                         tournament.Add(warrior1);
                                         quit = true;
                                         break;
@@ -150,7 +150,7 @@ namespace Lab3
                 Console.WriteLine("\n" + new string('-', 30) + "\n");
                 foreach (Soldier soldier in tournament)
                 {
-                    soldier.showInfo();
+                    soldier.ShowInfo();
                 }
             }
             Console.WriteLine("\nAND THIS IS THE WINNER!");

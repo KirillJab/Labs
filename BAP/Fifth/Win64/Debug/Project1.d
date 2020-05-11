@@ -1,4 +1,4 @@
-.\Win64\Debug\Project1.o: D:\University\Labs\BAP\Fifth\Project1PCH1.h \
+.\Win64\Debug\Project1.o: Project1.cpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\vcl.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\basepch0.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.hpp \
@@ -15,12 +15,12 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\crtl\stdarg.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\windef.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\minwindef.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\SpecStrings.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\specstrings.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\sal.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\concurrencysal.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ConcurrencySal.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\specstrings_strict.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\DriverSpecs.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\sdv_driverspecs.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\driverspecs.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/sdv_driverspecs.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\no_sal2.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\winnt.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\crtl\ctype.h \
@@ -32,11 +32,14 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\crtl\_str.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\crtl\locale.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\crtl\_loc.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/pshpack4.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/poppack.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\pshpack4.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\poppack.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/pshpack2.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\pshpack2.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\pshpack8.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\pshpack1.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/pshpack8.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/pshpack1.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\apiset.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ktmtypes.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\winbase.h \
@@ -74,6 +77,7 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\winerror.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\timezoneapi.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\wingdi.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\pshpack1.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\winuser.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\tvout.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\winnls.h \
@@ -98,16 +102,18 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\crtl\delayimp.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\basetyps.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\unknwn.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpc.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/rpc.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\pshpack8.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcdce.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcdcep.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcnsi.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcnterr.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcndr.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/rpcndr.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcnsip.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcsal.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\wtypes.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\wtypesbase.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/wtypes.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/wtypesbase.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/guiddef.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\sysclass.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\dinkumware64\iostream \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\dinkumware64\istream \
@@ -198,17 +204,20 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\crtl\assert.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\sysopen.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\sysvari.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\wtypes.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\oaidl.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\objidl.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/objidl.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/unknwn.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\autoargs.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\sysiterator.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.Types.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\SystemTypes.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ocidl.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\oleidl.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\servprov.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\urlmon.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\msxml.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/oleidl.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/oaidl.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/servprov.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/urlmon.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/msxml.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.Windows.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.UITypes.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\wintrust.h \
@@ -234,14 +243,20 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.Wincodec.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.ActiveX.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\olectl.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\docobj.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\docobj.H \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/ocidl.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\oleauto.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\propidl.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\coml2api.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\combaseapi.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpc.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\rpcndr.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\wtypesbase.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\unknwnbase.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\objidlbase.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/unknwnbase.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\cguid.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\objidl.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\propidlbase.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\comcat.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\dispex.h \
@@ -251,17 +266,19 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shtypes.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shlwapi.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\objbase.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\urlmon.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\wincodec.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\dxgiformat.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\dxgitype.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\dxgicommon.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/propidl.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/dxgiformat.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/dxgitype.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/dxgicommon.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\intsafe.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\dcommon.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Menus.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.Contnrs.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ImgList.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.CommCtrl.hpp \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\commctrl.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\CommCtrl.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\prsht.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\dpa_dsa.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\System.ImageList.hpp \
@@ -305,22 +322,31 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ObjectArray.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.PropSys.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.StructuredQueryCondition.hpp \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\StructuredQueryCondition.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\structuredquerycondition.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\propsys.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/shtypes.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/StructuredQueryCondition.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\propkeydef.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.MSXMLIntf.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\MsXml2.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ole2.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\oleidl.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shlguid.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\isguids.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\exdisp.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/docobj.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shldisp.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\knownfolders.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shlobj.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ShObjIdl.h \
-  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shobjidl_core.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shobjidl.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/comcat.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/prsht.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/propsys.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/ObjectArray.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk/shobjidl_core.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\sherrors.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shlobj_core.h \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\shobjidl_core.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\rtl\Winapi.ShellScaling.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ShellScalingApi.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.Dialogs.hpp \
@@ -336,4 +362,4 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ToolWin.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ExtCtrls.hpp \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ListActns.hpp \
-  Project1.cpp
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\sdk\ShObjIdl.h

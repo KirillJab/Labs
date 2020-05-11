@@ -8,6 +8,6 @@ namespace Lab3
 {
     interface IHeal
     {
-        void heal();
+        void Heal();
 	}
 }
