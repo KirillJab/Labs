@@ -1,0 +1,25 @@
+//---------------------------------------------------------------------------
+#include "Order.h"
+#ifndef ListH
+#define ListH
+//---------------------------------------------------------------------------
+
+class List
+{
+	public:
+	Order *Head;
+	Order *Tail;
+	unsigned int Size;
+	List()
+	{
+		Head = NULL;
+		Tail = NULL;
+		Size = 0;
+        Order.Count = 0;
+	}
+	void Push(Order*);
+	void Remove(int);
+	Order* Get(int);
+};
+
+#endif

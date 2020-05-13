@@ -1,0 +1,20 @@
+//---------------------------------------------------------------------------
+#include <string>
+
+using namespace std;
+
+#ifndef OrderH
+#define OrderH
+//---------------------------------------------------------------------------
+
+class Order
+{
+	public:
+	Order *Next;
+	unsigned int id;
+	string name;
+	string address;
+	string date;
+};
+
+#endif

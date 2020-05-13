@@ -144,6 +144,14 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="Line.cpp">
+            <DependentOn>Line.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="List.cpp">
+            <DependentOn>List.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Programm.cpp">
             <Form>Form1</Form>
             <FormType>dfm</FormType>

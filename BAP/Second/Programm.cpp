@@ -254,27 +254,33 @@ void __fastcall TForm1::ComboBoxSelect(TObject *Sender)
 	choice = ComboBox->ItemIndex;
     Find->Enabled = true;
 
-	if (choice == 0)
+	switch(choice)
 	{
-		GroupName->Enabled = false;
-		Available->Enabled = false;
-		Sold->Enabled = false;
-		Color->Enabled = false;
-		Delivery->Enabled = false;
-	}
-	if (choice == 1)
-	{
-		Available->Enabled = false;
-		Sold->Enabled = false;
-		Delivery->Enabled = false;
-	}
-	if (choice == 2)
-	{
-        GroupName->Enabled = false;
-		Available->Enabled = false;
-		Sold->Enabled = false;
-		Color->Enabled = false;
-		Delivery->Enabled = false;
+		case 0:
+		{
+			GroupName->Enabled = false;
+			Available->Enabled = false;
+			Sold->Enabled = false;
+			Color->Enabled = false;
+			Delivery->Enabled = false;
+			break;
+		}
+		case 1:
+		{
+			Available->Enabled = false;
+			Sold->Enabled = false;
+			Delivery->Enabled = false;
+			break;
+		}
+		case 2:
+		{
+			GroupName->Enabled = false;
+			Available->Enabled = false;
+			Sold->Enabled = false;
+			Color->Enabled = false;
+			Delivery->Enabled = false;
+			break;
+		}
 	}
 }
 

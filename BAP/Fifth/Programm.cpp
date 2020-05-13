@@ -8,73 +8,6 @@
 #pragma resource "*.dfm"
 TForm1 *Form1;
 bool chosen = false;
-typedef struct Line
-{
-	Line* Prev;
-	Line* Next;
-	string Text;
-	bool Picked;
-	Line (string text)
-	{
-		Next = NULL;
-		Prev = NULL;
-		Text = text;
-		Picked = false;
-	}
-	Line(){};
-}Line;
-
-typedef struct List
-{
-	public:
-	Line* Head;
-	Line* Tail;
-	int Size;
-	List()
-	{
-		Head = NULL;
-		Tail = NULL;
-		Size = 0;
-	}
-	void add(string text)
-	{
-		Line *line = new Line(text);
-		line->Text = text;
-		if(this->Head == NULL)
-		{
-			line->Prev = NULL;
-			line->Next = NULL;
-			this->Head = line;
-			this->Tail = line;
-		}
-		else
-		{
-
-			line->Prev = this->Tail;
-			line->Next = NULL;
-			this->Tail->Next = line;
-			this->Tail = line;
-		}
-		this->Size++;
-	}
-	Line* get(int j)
-	{
-		Line *line = this->Head;
-		if(j > this->Size - 1)
-		{
-			throw 13;
-		}
-		else
-		{
-			for (int i = 0; i < j; i++)
-			{
-				line = line->Next;
-			}
-		}
-		return line;
-	}
-
-}List;
 
 void clearLine(Line *line)
 {
@@ -86,7 +19,7 @@ void clearLine(Line *line)
 
 void clearList(List *list)
 {
-	if (list == NULL)
+	if (list == NULL || list->Size == 0)
 		return;
 	clearLine(list->Head->Next);
 	list->Head = NULL;
@@ -152,6 +85,7 @@ void __fastcall TForm1::ChooseButtonClick(TObject *Sender)
 {
 	chosen = true;
 	ChooseButton->Enabled = false;
+	ListBox->MultiSelect = false;
 }
 
 
@@ -174,9 +108,8 @@ void __fastcall TForm1::InsertButtonClick(TObject *Sender)
 		if(!list->get(i)->Picked)
 		{
 		UnicodeString str = ListBox->Items->Strings[i];
-		AnsiString astr = str;
 
-		boxList->add(astr.c_str());
+		boxList->add(((AnsiString)str).c_str());
 		}
 
 		if(ListBox->Selected[i])
@@ -185,8 +118,8 @@ void __fastcall TForm1::InsertButtonClick(TObject *Sender)
 		}
 	}
 	ListBox->Items->Clear();
-    //Rebuilding ListBox
-	for (; j < (pos - buffList->Size + 1); j++)
+	//Updating ListBox
+	for (; j < (pos - buffList->Size); j++)
 	{
 		ListBox->Items->Add(boxList->get(j)->Text.c_str());
 	}
@@ -198,6 +131,7 @@ void __fastcall TForm1::InsertButtonClick(TObject *Sender)
 	{
 		ListBox->Items->Add(boxList->get(j)->Text.c_str());
 	}
+
 	MemoBuff->Lines->Clear();
 	clearList(buffList);
 	clearList(boxList);
@@ -210,6 +144,7 @@ void __fastcall TForm1::InsertButtonClick(TObject *Sender)
 		list->add(astr.c_str());
 		list->get(i)->Picked = false;
 	}
+	ListBox->MultiSelect = true;
 }
 
 //---------------------Button3_Click----------------------//

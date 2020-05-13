@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+#include <string.h>
+
+using namespace std;
+
+#ifndef OrderH
+#define OrderH
+//---------------------------------------------------------------------------
+
+class order
+{
+	public:
+	unsigned int id;
+	string name;
+	string address;
+	string date;
+};
+
+#endif

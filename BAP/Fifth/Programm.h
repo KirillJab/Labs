@@ -7,8 +7,8 @@
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
-#include <string.h>
 #include <malloc.h>
+#include "List.h"
 
 using namespace std;
 //---------------------------------------------------------------------------

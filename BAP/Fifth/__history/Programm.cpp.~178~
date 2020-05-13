@@ -1,0 +1,154 @@
+
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Programm.h"
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+bool chosen = false;
+
+void clearLine(Line *line)
+{
+	if (line == NULL)
+		return;
+	clearLine(line->Next);
+	line = NULL;
+}
+
+void clearList(List *list)
+{
+	if (list == NULL || list->Size == 0)
+		return;
+	clearLine(list->Head->Next);
+	list->Head = NULL;
+    list->Size = 0;
+}
+
+
+
+List *list = new List;
+List *boxList = new List;
+List *buffList = new List;
+
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	Line line;
+
+	list->add("1  - First string");
+	list->add("2  - Second string");
+	list->add("3  - Third string");
+	list->add("4  - Fourht string");
+	list->add("5  - Fifth string");
+	list->add("6  - Sixth string");
+	list->add("7  - Seventh string");
+	list->add("8  - Eights string");
+	for (int i = 0; i < list->Size; i++)
+	{
+		ListBox->Items->Add(list->get(i)->Text.c_str());
+	}
+}
+//------------------------Click--------------------------//
+void __fastcall TForm1::ListBoxClick(TObject *Sender)
+{
+	if(!InsertButton->Enabled && !chosen)
+	{
+		ChooseButton->Enabled = true;
+		for (int i = 0; i < ListBox->Items->Count; i++)
+		{
+			if(ListBox->Selected[i])
+			{
+				UnicodeString str = ListBox->Items->Strings[i];
+				AnsiString astr = str;
+
+				if(!list->get(i)->Picked)
+				{
+					buffList->add(astr.c_str());
+					list->get(i)->Picked = true;
+
+					MemoBuff->Lines->Add(astr.c_str());
+				}
+			}
+		}
+	}
+	if(chosen)
+	{
+		InsertButton->Enabled = true;
+	}
+}
+
+//---------------------Button1_Click----------------------//
+void __fastcall TForm1::ChooseButtonClick(TObject *Sender)
+{
+	chosen = true;
+	ChooseButton->Enabled = false;
+}
+
+
+//---------------------Button2_Click----------------------//
+void __fastcall TForm1::InsertButtonClick(TObject *Sender)
+{
+	ChooseButton->Enabled = false;
+	InsertButton->Enabled = false;
+	Line line;
+	int pos, j;
+
+	line = *list->Head;
+	chosen = false;
+    j = 0;
+
+	MemoBuff->Lines->Clear();
+
+	for (int i = 0; i < ListBox->Items->Count; i++) //ListBox to struct List boxList
+	{
+		if(!list->get(i)->Picked)
+		{
+		UnicodeString str = ListBox->Items->Strings[i];
+
+		boxList->add(((AnsiString)str).c_str());
+		}
+
+		if(ListBox->Selected[i])
+		{
+			pos = i;
+		}
+	}
+	ListBox->Items->Clear();
+	//Updating ListBox
+	for (; j < (pos - buffList->Size); j++)
+	{
+		ListBox->Items->Add(boxList->get(j)->Text.c_str());
+	}
+	for (int i = 0; i < buffList->Size; i++)
+	{
+		ListBox->Items->Add(buffList->get(i)->Text.c_str());
+	}
+	for (; j < boxList->Size; j++)
+	{
+		ListBox->Items->Add(boxList->get(j)->Text.c_str());
+	}
+
+	MemoBuff->Lines->Clear();
+	clearList(buffList);
+	clearList(boxList);
+	clearList(list);
+	for (int i = 0; i < ListBox->Items->Count; i++) //Update list
+	{
+		UnicodeString str = ListBox->Items->Strings[i];
+		AnsiString astr = str;
+
+		list->add(astr.c_str());
+		list->get(i)->Picked = false;
+	}
+}
+
+//---------------------Button3_Click----------------------//
+void __fastcall TForm1::ExitButtonClick(TObject *Sender)
+{
+	Form1->Close();
+}
+
+
