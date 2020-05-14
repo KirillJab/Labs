@@ -165,6 +165,10 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="Queue.cpp">
+            <DependentOn>Queue.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
         <FormResources Include="Programm.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

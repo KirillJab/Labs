@@ -128,15 +128,15 @@ void __fastcall TForm1::AddClick(TObject *Sender)
 	}
 	else
 	{
-        throw("Id is taken");
-    }
+		throw ("Id is taken");
+	}
 	if(Name->Text != "")
 	{
 		order->Name = ((AnsiString)Name->Text).c_str();
 	}
 	else
 	{
-		throw("Name can't be Empty");
+		throw ("Name can't be Empty");
 	}
 	if(Name->Text != "Address can't be Empty")
 	{

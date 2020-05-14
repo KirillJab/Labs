@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+#include "Queue.h"
+
+#ifndef ListH
+#define ListH
+//---------------------------------------------------------------------------
+
+class List : public Queue
+{
+	public:
+	Line* Tail;
+	List() : Queue()
+	{
+		Tail = NULL;
+	}
+	Line* get(int);
+};
+
+#endif

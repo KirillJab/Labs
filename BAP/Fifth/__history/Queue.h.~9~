@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+#include "Line.h"
+#ifndef ListH
+#define ListH
+//---------------------------------------------------------------------------
+
+class Queue
+{
+	public:
+	Line* Head;
+	Line* Tail;
+	int Size;
+	Queue()
+	{
+		Head = NULL;
+		Tail = NULL;
+		Size = 0;
+	}
+	void Push(Line*);
+	void Pop();
+    bool Empty();
+};
+
+#endif

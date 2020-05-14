@@ -8,7 +8,6 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            throw new ArgumentException("ASDASDASDASDASSSSSSSSSSSSSSSSSSSSSSSSSSS");
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("\n\t Здравуствуйте, Дорогой Игрок! Добро пожаловать в наше -КАЗИНО-!\n\n В данный момент доступны только столики с игрой -BLACKJACK-. Желаете испытать удачу?\n\n\n 1 - Да\n\n 2 - Пожалуй откажусь (выйти из казино)");
             bool choice = true;

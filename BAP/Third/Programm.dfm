@@ -134,8 +134,8 @@ object Form1: TForm1
   object DoneOrders: TStaticText
     Left = 8
     Top = 337
-    Width = 273
-    Height = 16
+    Width = 67
+    Height = 17
     Caption = 'Done orders:'
     TabOrder = 12
   end

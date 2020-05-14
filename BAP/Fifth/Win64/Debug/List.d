@@ -1,4 +1,5 @@
 .\Win64\Debug\List.o: List.cpp D:\University\Labs\BAP\Fifth/List.h \
+  D:\University\Labs\BAP\Fifth/Queue.h \
   D:\University\Labs\BAP\Fifth/Line.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\dinkumware64\string \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\dinkumware64\istream \
