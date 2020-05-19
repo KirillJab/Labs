@@ -203,7 +203,6 @@ namespace Lab2
                         }
                     default:
                         {
-                            Console.WriteLine("default");
                             break;
                         }
                 }

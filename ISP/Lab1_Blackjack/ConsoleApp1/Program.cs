@@ -79,7 +79,7 @@ namespace ConsoleApp1
                 else
                 if (watchesOn)
                 {
-                    Console.WriteLine(" Ваш баланс: " + Player.Money + ". У вас законичились фишки. Заложить дедовы часы? (+800)\n\n\n 1 - Да\n\n 2 - Нет, с меня хватит");
+                    Console.WriteLine("\n Ваш баланс: " + Player.Money + ". У вас законичились фишки. Заложить дедовы часы? (+800)\n\n\n 1 - Да\n\n 2 - Нет, с меня хватит");
                     bool choice2 = true;
                     while (choice2)
                     {

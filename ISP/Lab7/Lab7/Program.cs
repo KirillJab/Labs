@@ -36,7 +36,7 @@ namespace Lab7
             }
             if (a <= b)
             {
-                Console.WriteLine("a <+ b");
+                Console.WriteLine("a <= b");
             }
             if (a >= b)
             {

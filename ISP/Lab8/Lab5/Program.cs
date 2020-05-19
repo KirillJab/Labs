@@ -155,7 +155,7 @@ namespace Lab3
                 }
                 if (tournament.Count < 2)
                 {
-                    Console.WriteLine("HEY!\n Seems like you running out fighters, aren't you?\nWanna add some more fresh meat?\n\n" +
+                    Console.WriteLine("HEY!\n Seems like you are running out fighters, aren't you?\nWanna add some more fresh meat?\n\n" +
                         "1) Yes\n" +
                         "Any other key) No, let's and this bloodshee.., I mean tournament");
                     if (Console.ReadKey(true).KeyChar == '1')

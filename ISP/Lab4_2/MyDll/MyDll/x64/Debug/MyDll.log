@@ -1,0 +1,10 @@
+﻿  pch.cpp
+  dllmain.cpp
+  spherecalc.cpp
+D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(7,24): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(17,53): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(23,12): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+  Создание кода...
+     Создается библиотека D:\University\Labs\ISP\Lab4_2\MyDll\x64\Debug\MyDll.lib и объект D:\University\Labs\ISP\Lab4_2\MyDll\x64\Debug\MyDll.exp
+  MyDll.vcxproj -> D:\University\Labs\ISP\Lab4_2\MyDll\x64\Debug\MyDll.dll

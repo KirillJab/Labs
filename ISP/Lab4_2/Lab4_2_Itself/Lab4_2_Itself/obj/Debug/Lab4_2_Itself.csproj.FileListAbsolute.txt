@@ -1,0 +1,6 @@
+D:\University\Labs\ISP\Lab4_2\Lab4_2_Itself\Lab4_2_Itself\bin\Debug\Lab4_2_Itself.exe.config
+D:\University\Labs\ISP\Lab4_2\Lab4_2_Itself\Lab4_2_Itself\bin\Debug\Lab4_2_Itself.exe
+D:\University\Labs\ISP\Lab4_2\Lab4_2_Itself\Lab4_2_Itself\bin\Debug\Lab4_2_Itself.pdb
+D:\University\Labs\ISP\Lab4_2\Lab4_2_Itself\Lab4_2_Itself\obj\Debug\Lab4_2_Itself.exe
+D:\University\Labs\ISP\Lab4_2\Lab4_2_Itself\Lab4_2_Itself\obj\Debug\Lab4_2_Itself.pdb
+D:\University\Labs\ISP\Lab4_2\Lab4_2_Itself\Lab4_2_Itself\obj\Debug\Lab4_2_Itself.csprojAssemblyReference.cache

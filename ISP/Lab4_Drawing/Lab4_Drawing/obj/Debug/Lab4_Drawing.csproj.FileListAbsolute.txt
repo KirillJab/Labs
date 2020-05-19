@@ -1,0 +1,6 @@
+D:\University\Labs\ISP\Lab4_Drawing\Lab4_Drawing\bin\Debug\Lab4_Drawing.exe.config
+D:\University\Labs\ISP\Lab4_Drawing\Lab4_Drawing\bin\Debug\Lab4_Drawing.exe
+D:\University\Labs\ISP\Lab4_Drawing\Lab4_Drawing\bin\Debug\Lab4_Drawing.pdb
+D:\University\Labs\ISP\Lab4_Drawing\Lab4_Drawing\obj\Debug\Lab4_Drawing.csprojAssemblyReference.cache
+D:\University\Labs\ISP\Lab4_Drawing\Lab4_Drawing\obj\Debug\Lab4_Drawing.exe
+D:\University\Labs\ISP\Lab4_Drawing\Lab4_Drawing\obj\Debug\Lab4_Drawing.pdb
