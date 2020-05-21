@@ -1,0 +1,204 @@
+
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Programm.h"
+
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+
+TForm1 *Form1;
+float a, b, c, d, e;
+
+bool IsVar(char ch)
+{
+	if (96 < ch && ch < 102)
+	{
+		return true;
+	}
+	return false;
+}
+
+int IsOper(char ch)
+{
+	if (ch == '+' || ch == '-')
+	{
+		return 1;
+	}
+	if (ch == '*' || ch == '/')
+	{
+		return 2;
+	}
+	if (ch == '(')
+	{
+		return 3;
+	}
+	if( ch == ')')
+	{
+		return 4;
+	}
+    if( ch == ']')
+	{
+		return 5;
+	}
+	return 0;
+}
+/*
+AnsiString Conversion(string inp)
+{
+	AnsiString str;
+	Stack ops;
+	Stack vars;
+	float result;
+
+	for (int i = 0; i < inp.length(); i++)
+	{
+		if(IsVar(inp[i]))
+		{
+			str += inp[i];
+			vars.Push(inp[i]);
+		}
+		else
+		{
+			if(IsOper(inp[i] == 2))
+			{
+				if(IsOper(ops.Back()->Value) != 2)
+				{
+					a = vars.Back()->Value - 48;
+					vars.Pop();
+					b = vars.Back()->Value - 48;
+					vars.Pop();
+					switch(inp[i])
+					{
+						case '*':
+						{
+							result = a * b;
+							break;
+						}
+						case '/':
+						{
+							result = a / b;
+							break;
+						}
+					}
+					ops.Push(str[i]);
+					//str += result;
+				}
+			}
+		}
+	}
+	return str;
+} */
+
+AnsiString Conversion(string inp)
+{
+	Stack ops;
+	string vars;
+	AnsiString str;
+	float result;
+	int brackets = 0;
+
+	inp += ']';
+
+	for (int i = 0; i < inp.length(); i++)
+	{
+		if(IsVar(inp[i]))
+		{
+			str += inp[i];
+		}
+		else
+		{
+			switch(IsOper(inp[i]))
+			{
+				case 1:// '+' || '-'
+				{
+					if(!ops.Empty() && ops.Back()->Value != '(')
+					{
+						str += ops.Back()->Value;
+						ops.Pop();
+					}
+					ops.Push(inp[i]);
+					break;
+				}
+				case 2:// '*' || '/'
+				{
+					if(!ops.Empty() && ops.Back()->Value != '(')
+					{
+						if(IsOper(ops.Back()->Value) == 2)
+						{
+							str += ops.Back()->Value;
+							ops.Pop();
+						}
+					}
+					ops.Push(inp[i]);
+					break;
+				}
+				case 3:// '('
+				{
+					ops.Push(inp[i]);
+					brackets++;
+					break;
+				}
+				case 4:// ')'
+				{
+					if(!ops.Empty() && brackets != 0)
+					{
+						while(ops.Back()->Value != '(' && !ops.Empty())
+						{
+							str += ops.Back()->Value;
+							ops.Pop();
+						}
+					}
+					else
+					{
+						ShowMessage("Invalid Input"); //Uneven number of brackets
+						throw 8;
+					}
+					break;
+				}
+				case 5:// End symbol
+				{
+					while(!ops.Empty())
+					{
+						str += ops.Back()->Value;
+						ops.Pop();
+					}
+					break;
+				}
+				default:
+				{
+					ShowMessage("Invalid Input"); //No such variable or operator available
+					throw 8;
+					break;
+				}
+			}
+		}
+	}
+	return str;
+}
+
+__fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner)
+{
+
+}
+
+void __fastcall TForm1::FillVariantButtonClick(TObject *Sender)
+{
+	a = 9.1;
+	b = 0.6;
+	c = 2.4;
+	d = 3.7;
+	e = 8.5;
+	AEdit->Text = "9.1";
+	BEdit->Text = "0.6";
+	CEdit->Text = "2.4";
+	DEdit->Text = "3.7";
+	EEdit->Text = "8.5";
+	Task->Text = "a+b*c/d-e";
+}
+void __fastcall TForm1::SolveButtonClick(TObject *Sender)
+{
+	Notation->Text = Conversion(((AnsiString)Task->Text).c_str());
+	Result->Text = "abc*d/+e-";
+}

@@ -1,0 +1,133 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 312
+  ClientWidth = 660
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Edit1: TEdit
+    Left = 76
+    Top = 144
+    Width = 225
+    Height = 21
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 67
+    Top = 240
+    Width = 73
+    Height = 21
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 188
+    Top = 240
+    Width = 73
+    Height = 21
+    TabOrder = 2
+  end
+  object Edit4: TEdit
+    Left = 308
+    Top = 240
+    Width = 73
+    Height = 21
+    TabOrder = 3
+  end
+  object Edit5: TEdit
+    Left = 428
+    Top = 240
+    Width = 73
+    Height = 21
+    TabOrder = 4
+  end
+  object Letter: TStaticText
+    Left = 162
+    Top = 240
+    Width = 20
+    Height = 17
+    Caption = ' b: '
+    TabOrder = 5
+  end
+  object StaticText1: TStaticText
+    Left = 41
+    Top = 240
+    Width = 20
+    Height = 17
+    Caption = ' a: '
+    TabOrder = 6
+  end
+  object StaticText2: TStaticText
+    Left = 282
+    Top = 240
+    Width = 19
+    Height = 17
+    Caption = ' c: '
+    TabOrder = 7
+  end
+  object StaticText5: TStaticText
+    Left = 402
+    Top = 240
+    Width = 20
+    Height = 17
+    Caption = ' d: '
+    TabOrder = 8
+  end
+  object Edit6: TEdit
+    Left = 548
+    Top = 240
+    Width = 73
+    Height = 21
+    TabOrder = 9
+  end
+  object StaticText6: TStaticText
+    Left = 522
+    Top = 240
+    Width = 20
+    Height = 17
+    Caption = ' e: '
+    TabOrder = 10
+  end
+  object StaticText3: TStaticText
+    Left = 326
+    Top = 148
+    Width = 12
+    Height = 17
+    Caption = '='
+    TabOrder = 11
+  end
+  object Edit7: TEdit
+    Left = 364
+    Top = 144
+    Width = 225
+    Height = 21
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabOrder = 12
+    TextHint = 'Result'
+  end
+  object Button1: TButton
+    Left = 296
+    Top = 171
+    Width = 75
+    Height = 25
+    Caption = 'Solve'
+    TabOrder = 13
+  end
+  object Button2: TButton
+    Left = 296
+    Top = 202
+    Width = 75
+    Height = 25
+    Caption = '15th Variant'
+    TabOrder = 14
+  end
+end

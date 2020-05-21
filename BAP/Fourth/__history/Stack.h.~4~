@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#ifndef StackH
+#define StackH
+//---------------------------------------------------------------------------
+class Item
+{
+	char ch;
+	Item* Prev;
+	Item()
+	{
+        Prev = NULL:
+    }
+};
+class Stack
+{
+	Item* Tail;
+	void Push(char);
+	void Pop();
+	Item* Back();
+	bool Empty();
+};
+#endif

@@ -1,0 +1,41 @@
+//------------------------------------------------------------------------------
+
+#pragma hdrstop
+//------------------------------------------------------------------------------
+#include "Stack.h"
+#pragma package(smart_init)
+
+void Stack::Push(char ch)
+{
+	if(this->Tail == NULL)
+	{
+        Item* item = new Item(ch);
+		this->Tail = item;
+	}
+	else
+	{
+		Item* item = new Item(ch);
+		item->Prev = this->Tail;
+		this->Tail = item;
+	}
+}
+void Stack::Pop()
+{
+	this->Tail = this->Tail->Prev;
+}
+Item* Stack::Back()
+{
+	if(!this->Empty())
+	{
+		return this->Tail;
+	}
+    return NULL;
+}
+bool Stack::Empty()
+{
+	if(this->Tail == NULL)
+	{
+		return true;
+	}
+	return false;;
+}
