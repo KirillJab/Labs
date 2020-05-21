@@ -7,29 +7,39 @@
 
 void Stack::Push(char ch)
 {
-	if(this->Tail == NULL)
+	Item* item = new Item(ch);
+	if(this->Empty())
 	{
-        Item* item = new Item(ch);
+        item->Prev = NULL;
 		this->Tail = item;
 	}
 	else
 	{
-		Item* item = new Item(ch);
 		item->Prev = this->Tail;
 		this->Tail = item;
 	}
 }
 void Stack::Pop()
 {
-	this->Tail = this->Tail->Prev;
+	if(!this->Empty())
+	{
+		this->Tail = this->Tail->Prev;
+	}
+	else
+	{
+		throw 13;
+	}
 }
 Item* Stack::Back()
 {
-	if(this->Empty())
+	if(!this->Empty())
 	{
 		return this->Tail;
 	}
-	throw 13;
+	else
+	{
+		throw 13;
+    }
 }
 bool Stack::Empty()
 {
@@ -37,5 +47,5 @@ bool Stack::Empty()
 	{
 		return true;
 	}
-	return false;;
+	return false;
 }

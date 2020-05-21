@@ -10,12 +10,12 @@ void Stack::Push(char ch)
 	Item* item = new Item(ch);
 	if(this->Empty())
 	{
-        item->Prev = NULL;
+		item->Next = NULL;
 		this->Tail = item;
 	}
 	else
 	{
-		item->Prev = this->Tail;
+		item->Next = this->Tail;
 		this->Tail = item;
 	}
 }
@@ -23,7 +23,7 @@ void Stack::Pop()
 {
 	if(!this->Empty())
 	{
-		this->Tail = this->Tail->Prev;
+		this->Tail = this->Tail->Next;
 	}
 	else
 	{

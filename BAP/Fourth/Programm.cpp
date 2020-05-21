@@ -44,59 +44,100 @@ int IsOper(char ch)
 	}
 	return 0;
 }
-/*
-AnsiString Conversion(string inp)
+
+float GetValue(char ch)
 {
-	AnsiString str;
-	Stack ops;
+	switch(ch)
+	{
+		case 'a':
+		{
+			return a;
+			break;
+		}
+		case 'b':
+		{
+			return b;
+			break;
+		}
+		case 'c':
+		{
+			return c;
+			break;
+		}
+		case 'd':
+		{
+			return d;
+			break;
+		}
+		case 'e':
+		{
+			return e;
+			break;
+		}
+	}
+}
+
+float Calc(float a, float b, char ch)
+{
+switch(ch)
+	{
+		case '+':
+		{
+			return a + b;
+			break;
+		}
+		case '-':
+		{
+			return a - b;
+			break;
+		}
+		case '*':
+		{
+			return a * b;
+			break;
+		}
+		case '/':
+		{
+			if (b != 0)
+			{
+				return a / b;
+			}
+			throw 1; //Division by zero
+			break;
+		}
+	}
+}
+//		'abc*+de-/'
+float Calculate(string inp)
+{
 	Stack vars;
-	float result;
+	Stack ops;
+	float result = 0;
+	char A, B;
+	float a, b;
 
 	for (int i = 0; i < inp.length(); i++)
 	{
 		if(IsVar(inp[i]))
 		{
-			str += inp[i];
 			vars.Push(inp[i]);
 		}
 		else
 		{
-			if(IsOper(inp[i] == 2))
-			{
-				if(IsOper(ops.Back()->Value) != 2)
-				{
-					a = vars.Back()->Value - 48;
-					vars.Pop();
-					b = vars.Back()->Value - 48;
-					vars.Pop();
-					switch(inp[i])
-					{
-						case '*':
-						{
-							result = a * b;
-							break;
-						}
-						case '/':
-						{
-							result = a / b;
-							break;
-						}
-					}
-					ops.Push(str[i]);
-					//str += result;
-				}
-			}
+			b = GetValue(vars.Back()->Value);
+			vars.Pop();
+			a = GetValue(vars.Back()->Value);
+			vars.Pop();
+			vars.Push(Calc(a, b, inp[i]));
 		}
 	}
-	return str;
-} */
+	return vars.Back()->Value - 48;
+}
 
-AnsiString Conversion(string inp)
+AnsiString Convert(string inp)
 {
 	Stack ops;
-	string vars;
 	AnsiString str;
-	float result;
 	int brackets = 0;
 
 	inp += ']';
@@ -161,7 +202,10 @@ AnsiString Conversion(string inp)
 				{
 					while(!ops.Empty())
 					{
-						str += ops.Back()->Value;
+						if(ops.Back()->Value != '(')
+						{
+							str += ops.Back()->Value;
+						}
 						ops.Pop();
 					}
 					break;
@@ -175,6 +219,7 @@ AnsiString Conversion(string inp)
 			}
 		}
 	}
+	delete ops.Tail;
 	return str;
 }
 
@@ -195,10 +240,11 @@ void __fastcall TForm1::FillVariantButtonClick(TObject *Sender)
 	CEdit->Text = "2.4";
 	DEdit->Text = "3.7";
 	EEdit->Text = "8.5";
-	Task->Text = "a+b*c/d-e";
+	Task->Text = "(a+b*c)/(d-e)";
 }
 void __fastcall TForm1::SolveButtonClick(TObject *Sender)
 {
-	Notation->Text = Conversion(((AnsiString)Task->Text).c_str());
-	Result->Text = "abc*d/+e-";
+	Notation->Text = Convert(((AnsiString)Task->Text).c_str());
+	Result->Text = Calculate(((AnsiString)Notation->Text).c_str());
+
 }

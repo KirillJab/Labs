@@ -5,16 +5,23 @@
 //---------------------------------------------------------------------------
 class Item
 {
-	char ch;
+	public:
+	char Value;
 	Item* Prev;
-	Item()
+	Item(char ch)
 	{
-        Prev = NULL:
+		Prev = NULL;
+		Value = ch;
     }
 };
 class Stack
 {
+	public:
 	Item* Tail;
+	Stack()
+	{
+        Tail = NULL;
+    }
 	void Push(char);
 	void Pop();
 	Item* Back();
