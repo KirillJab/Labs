@@ -14,7 +14,7 @@ float _cdecl AreaAtDistance(float rad, float dist)
 {
 	if (dist < rad && dist >= 0)
 	{
-		return pow(sqrtf(rad * rad - dist * dist), 2) * M_PI;
+		return (rad * rad - dist * dist ) * M_PI;
 	}
 	return -1;
 }

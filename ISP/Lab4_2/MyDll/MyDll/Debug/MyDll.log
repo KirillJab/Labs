@@ -4,7 +4,7 @@ D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.h(5,10): warning C4067: н�
   spherecalc.cpp
 D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(7,24): warning C4244: return: преобразование "double" в "float", возможна потеря данных
 D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(11,24): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(17,49): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(17,37): warning C4244: return: преобразование "double" в "float", возможна потеря данных
 D:\University\Labs\ISP\Lab4_2\MyDll\MyDll\spherecalc.cpp(23,12): warning C4244: return: преобразование "double" в "float", возможна потеря данных
   Создание кода...
      Создается библиотека D:\University\Labs\ISP\Lab4_2\MyDll\Debug\MyDll.lib и объект D:\University\Labs\ISP\Lab4_2\MyDll\Debug\MyDll.exp
