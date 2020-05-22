@@ -338,4 +338,5 @@
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\windows\vcl\Vcl.ListActns.hpp \
   Programm.cpp D:\University\Labs\BAP\Fourth/Programm.h \
   c:\program\ files\ (x86)\embarcadero\studio\20.0\include\dinkumware64\string \
+  c:\program\ files\ (x86)\embarcadero\studio\20.0\include\dinkumware64\sstream \
   D:\University\Labs\BAP\Fourth/Stack.h

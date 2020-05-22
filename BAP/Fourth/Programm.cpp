@@ -74,6 +74,10 @@ float GetValue(char ch)
 			return e;
 			break;
 		}
+		default:
+		{
+			throw 8;
+		}
 	}
 }
 
@@ -102,12 +106,16 @@ switch(ch)
 			{
 				return a / b;
 			}
-			throw 1; //Division by zero
+			throw 0; //Division by zero
 			break;
+		}
+		default:
+		{
+			throw 8;
 		}
 	}
 }
-//		'abc*+de-/'
+
 float Calculate(string inp)
 {
 	Stack vars;
@@ -120,18 +128,18 @@ float Calculate(string inp)
 	{
 		if(IsVar(inp[i]))
 		{
-			vars.Push(inp[i]);
+			vars.Push((float)GetValue(inp[i]));
 		}
 		else
 		{
-			b = GetValue(vars.Back()->Value);
+			b = vars.Back()->floatValue;
 			vars.Pop();
-			a = GetValue(vars.Back()->Value);
+			a = vars.Back()->floatValue;
 			vars.Pop();
 			vars.Push(Calc(a, b, inp[i]));
 		}
 	}
-	return vars.Back()->Value - 48;
+	return vars.Back()->floatValue;
 }
 
 AnsiString Convert(string inp)
@@ -190,6 +198,7 @@ AnsiString Convert(string inp)
 							str += ops.Back()->Value;
 							ops.Pop();
 						}
+						ops.Pop();
 					}
 					else
 					{
@@ -202,10 +211,7 @@ AnsiString Convert(string inp)
 				{
 					while(!ops.Empty())
 					{
-						if(ops.Back()->Value != '(')
-						{
-							str += ops.Back()->Value;
-						}
+						str += ops.Back()->Value;
 						ops.Pop();
 					}
 					break;
@@ -230,21 +236,23 @@ __fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner)
 
 void __fastcall TForm1::FillVariantButtonClick(TObject *Sender)
 {
-	a = 9.1;
-	b = 0.6;
-	c = 2.4;
-	d = 3.7;
-	e = 8.5;
-	AEdit->Text = "9.1";
-	BEdit->Text = "0.6";
-	CEdit->Text = "2.4";
-	DEdit->Text = "3.7";
-	EEdit->Text = "8.5";
+	AEdit->Text = "9,1";
+	BEdit->Text = "0,6";
+	CEdit->Text = "2,4";
+	DEdit->Text = "3,7";
+	EEdit->Text = "8,5";
 	Task->Text = "(a+b*c)/(d-e)";
+    ShowMessage("Answer should be -2,196");
 }
 void __fastcall TForm1::SolveButtonClick(TObject *Sender)
 {
+	wstringstream s;
+
+	a = (float)AEdit->Text.ToDouble();
+	b = (float)BEdit->Text.ToDouble();
+	c = (float)CEdit->Text.ToDouble();
+	d = (float)DEdit->Text.ToDouble();
+	e = (float)EEdit->Text.ToDouble();
 	Notation->Text = Convert(((AnsiString)Task->Text).c_str());
 	Result->Text = Calculate(((AnsiString)Notation->Text).c_str());
-
 }

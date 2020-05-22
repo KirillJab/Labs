@@ -19,6 +19,20 @@ void Stack::Push(char ch)
 		this->Tail = item;
 	}
 }
+void Stack::Push(float num)
+{
+	Item* item = new Item(num);
+	if(this->Empty())
+	{
+		item->Next = NULL;
+		this->Tail = item;
+	}
+	else
+	{
+		item->Next = this->Tail;
+		this->Tail = item;
+	}
+}
 void Stack::Pop()
 {
 	if(!this->Empty())

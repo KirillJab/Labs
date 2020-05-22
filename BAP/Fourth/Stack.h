@@ -8,11 +8,18 @@ class Item
 {
 	public:
 	char Value;
+    float floatValue;
 	Item* Next;
 	Item(char ch)
 	{
 		Next = NULL;
 		Value = ch;
+		floatValue = 0;
+	}
+	Item(float num)
+	{
+		Next = NULL;
+		floatValue = num;
 	}
 };
 
@@ -25,6 +32,7 @@ class Stack
         Tail = NULL;
     }
 	void Push(char);
+	void Push(float);
 	void Pop();
 	Item* Back();
 	bool Empty();

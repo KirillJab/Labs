@@ -8,6 +8,7 @@
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 #include <string>
+#include <sstream>
 #include "Stack.h"
 
 using namespace std;
