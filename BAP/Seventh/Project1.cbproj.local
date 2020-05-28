@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2020.05.22 21:48:15.521,=D:\University\Labs\BAP\Project1PCH1.h</Transaction>
+    <Transaction>2020.05.22 21:48:15.970,=D:\University\Labs\BAP\Unit1.cpp</Transaction>
+    <Transaction>2020.05.22 21:48:43.914,D:\University\Labs\BAP\Seventh\Programm.cpp=D:\University\Labs\BAP\Unit1.cpp</Transaction>
+    <Transaction>2020.05.22 21:48:43.914,D:\University\Labs\BAP\Seventh\Programm.h=D:\University\Labs\BAP\Unit1.h</Transaction>
+    <Transaction>2020.05.22 21:48:43.914,D:\University\Labs\BAP\Seventh\Programm.dfm=D:\University\Labs\BAP\Unit1.dfm</Transaction>
+    <Transaction>2020.05.22 21:48:47.367,D:\University\Labs\BAP\Seventh\Project1PCH1.h=D:\University\Labs\BAP\Project1PCH1.h</Transaction>
+    <Transaction>2020.05.22 21:48:49.542,D:\University\Labs\BAP\Seventh\Project1.cbproj=D:\University\Labs\BAP\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
