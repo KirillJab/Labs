@@ -3,7 +3,7 @@
 #ifndef StackH
 #define StackH
 //---------------------------------------------------------------------------
-//template <class T>
+
 class Item
 {
 	public:

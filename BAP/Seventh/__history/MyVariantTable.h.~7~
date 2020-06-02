@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#include "HashTable.h"
+
+#ifndef MyVariantTableH
+#define MyVariantTableH
+//---------------------------------------------------------------------------
+
+class MyHashTable : public HashTable
+{
+	MyVariantTable(int key) : base(key)
+	void Print();
+	void Delete(int, int);
+};
+
+#endif

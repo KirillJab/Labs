@@ -242,8 +242,10 @@ void __fastcall TForm1::FillVariantButtonClick(TObject *Sender)
 	DEdit->Text = "3,7";
 	EEdit->Text = "8,5";
 	Task->Text = "(a+b*c)/(d-e)";
-    ShowMessage("Answer should be -2,196");
+	ShowMessage("Answer should be -2,196");
+    SolveButtonClick(Sender);
 }
+
 void __fastcall TForm1::SolveButtonClick(TObject *Sender)
 {
 	wstringstream s;

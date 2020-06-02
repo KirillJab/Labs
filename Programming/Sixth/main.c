@@ -99,18 +99,19 @@ void deleteBranch(Node *node)
 void showNode(Node *curNode)
 {
     if(curNode == NULL) return;
-    printf("%d ", curNode->value);
 
     showNode(curNode->left);
+    printf("%d ", curNode->value);
+
     showNode(curNode->right);
 }
 
 void showTree(Tree *tree)
 {
     if(tree->root == NULL) return;
+    showNode(tree->root->left);
     printf("%d ", tree->root->value);
 
-    showNode(tree->root->left);
     showNode(tree->root->right);
 }
 
