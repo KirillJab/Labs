@@ -28,7 +28,7 @@ object Form1: TForm1
     Top = 229
     Width = 98
     Height = 32
-    Caption = 'Delete [K1; K2]'
+    Caption = 'Delete (K1; K2)'
     TabOrder = 1
     OnClick = TaskDeleteButtonClick
   end
