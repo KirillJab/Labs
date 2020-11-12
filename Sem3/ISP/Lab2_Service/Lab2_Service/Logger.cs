@@ -5,20 +5,6 @@ namespace Lab2_Service
 {
     class Logger
     {
-        /*
-         FileSystemWatcher sourceWatcher = new FileSystemWatcher(@"C:\Users\Kirill\Desktop\SourceDirectory");
-
-            sourceWatcher.Filter = "*.txt";
-            sourceWatcher.EnableRaisingEvents = true;
-            sourceWatcher.IncludeSubdirectories = true;
-
-            sourceWatcher.Created += SourceWatcher_Created;
-            sourceWatcher.Renamed += SourceWatcher_Renamed;
-         */
-
-
-
-
         FileSystemWatcher sourceWatcher;
         bool enabled = true;
         public Logger()
@@ -44,7 +30,7 @@ namespace Lab2_Service
         {
             sourceWatcher.EnableRaisingEvents = false;
             enabled = false;
-        }       
+        }
         private void SourceWatcher_Created(object sender, FileSystemEventArgs e)
         {
             FileInfo file = new FileInfo(e.FullPath);
@@ -75,17 +61,6 @@ namespace Lab2_Service
             text = Encryption.Decrypt(File.ReadAllText(newFilePath), key);
             File.WriteAllText(newFilePath, text);
         }
-
-        private static void CreateUniquePath(ref string path)
-        {
-            string buff = path;
-            for (int i = 1; File.Exists(path); i++)
-            {
-                buff = path + $"({i})";
-            }
-            path = buff;
-        }
-
         private static void AwaitForTheFileToClose(string path)
         {
             while (true)
@@ -103,6 +78,15 @@ namespace Lab2_Service
                 }
             }
 
+        }
+        private static void CreateUniquePath(ref string path)
+        {
+            string buff = path;
+            for (int i = 1; File.Exists(path); i++)
+            {
+                buff = path + $"({i})";
+            }
+            path = buff;
         }
     }
 }
