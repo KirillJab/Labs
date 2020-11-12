@@ -1,8 +1,0 @@
-Attachments	Door	12	100	Red	Yes
-Attachments 	Door	10	10	Black	Yes
-Attachments 	Door	11	0	Green	No
-Attachments 	Door	13	9	Brown	Yes
-Car Parts	Roof	12	21	Grey	Yes
-Car Parts	Roof	12	21	Grey	Yes
-Car Parts	Roof	12	21	Grey	Yes
-Car Parts	Roof	12	21	Grey	Yes

@@ -1,6 +1,0 @@
-D:\University\Labs\ISP\Lab3\Lab3\bin\Debug\Lab3.exe.config
-D:\University\Labs\ISP\Lab3\Lab3\bin\Debug\Lab3.exe
-D:\University\Labs\ISP\Lab3\Lab3\bin\Debug\Lab3.pdb
-D:\University\Labs\ISP\Lab3\Lab3\obj\Debug\Lab3.csprojAssemblyReference.cache
-D:\University\Labs\ISP\Lab3\Lab3\obj\Debug\Lab3.exe
-D:\University\Labs\ISP\Lab3\Lab3\obj\Debug\Lab3.pdb

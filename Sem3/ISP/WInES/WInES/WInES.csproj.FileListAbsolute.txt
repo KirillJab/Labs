@@ -1,0 +1,13 @@
+D:\University\Labs\Sem3\ISP\WInES\WInES\bin\Debug\WInES.exe.config
+D:\University\Labs\Sem3\ISP\WInES\WInES\bin\Debug\WInES.exe
+D:\University\Labs\Sem3\ISP\WInES\WInES\bin\Debug\WInES.pdb
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.Form1.resources
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.Properties.Resources.resources
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.csproj.GenerateResource.cache
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.exe
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.pdb
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.csprojAssemblyReference.cache
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.RenameForm.resources
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.TextEditorForm.resources
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.NewFileForm.resources
+D:\University\Labs\Sem3\ISP\WInES\WInES\obj\Debug\WInES.ZipForm.resources

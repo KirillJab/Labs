@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.759,=D:\University\Labs\BAP\Seventh\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.065,D:\University\Labs\BAP\Seventh\Unit1.cpp=D:\University\Labs\BAP\Seventh\Stack.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.230,=D:\University\Labs\BAP\Seventh\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.117,D:\University\Labs\BAP\Seventh\Unit1.cpp=D:\University\Labs\BAP\Seventh\Programm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.656,D:\University\Labs\BAP\Seventh\Unit1.cpp=D:\University\Labs\BAP\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.392,D:\University\Labs\BAP\Seventh\Unit1.cpp=D:\University\Labs\BAP\Seventh\HAshTable.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.864,D:\University\Labs\BAP\Seventh\ashTable.h=D:\University\Labs\BAP\Seventh\HashTable.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.864,D:\University\Labs\BAP\Seventh\ashTable.cpp=D:\University\Labs\BAP\Seventh\HashTable.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.091,=D:\University\Labs\BAP\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.585,D:\University\Labs\BAP\Seventh\Unit1.cpp=D:\University\Labs\BAP\Seventh\MyVariantTable.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.559,=D:\University\Labs\BAP\Seventh\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.585,D:\University\Labs\BAP\Seventh\Unit1.h=D:\University\Labs\BAP\Seventh\MyVariantTable.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.632,D:\University\Labs\BAP\Seventh\Project1PCH1.h=D:\University\Labs\BAP\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.099,D:\University\Labs\BAP\Seventh\HAshTable.h=D:\University\Labs\BAP\Seventh\ashTable.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.117,D:\University\Labs\BAP\Seventh\Unit1.dfm=D:\University\Labs\BAP\Seventh\Programm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.656,D:\University\Labs\BAP\Seventh\Unit1.dfm=D:\University\Labs\BAP\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.099,D:\University\Labs\BAP\Seventh\HAshTable.cpp=D:\University\Labs\BAP\Seventh\ashTable.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.809,D:\University\Labs\BAP\Seventh\Project1.cbproj=D:\University\Labs\BAP\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.392,D:\University\Labs\BAP\Seventh\Unit1.h=D:\University\Labs\BAP\Seventh\HAshTable.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.065,D:\University\Labs\BAP\Seventh\Unit1.h=D:\University\Labs\BAP\Seventh\Stack.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.117,D:\University\Labs\BAP\Seventh\Unit1.h=D:\University\Labs\BAP\Seventh\Programm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.656,D:\University\Labs\BAP\Seventh\Unit1.h=D:\University\Labs\BAP\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.988,=D:\University\Labs\BAP\Project1PCH1.h</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Project1.cpp"/>
+    <File Path="Project1PCH1.h"/>
+    <File Path="Programm.cpp"/>
+    <File Path="Programm.cpp"/>
+    <File Path="Programm.dfm"/>
+    <File Path="Programm.h"/>
+    <File Path="Stack.cpp"/>
+    <File Path="Stack.cpp"/>
+    <File Path="Stack.h"/>
+    <File Path="HashTable.cpp"/>
+    <File Path="HashTable.cpp"/>
+    <File Path="HashTable.h"/>
+    <File Path="MyVariantTable.cpp"/>
+    <File Path="MyVariantTable.cpp"/>
+    <File Path="MyVariantTable.h"/>
+  </ProjectSortOrder>
+</BorlandProject>
