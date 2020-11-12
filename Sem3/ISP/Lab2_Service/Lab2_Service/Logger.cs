@@ -9,7 +9,9 @@ namespace Lab2_Service
         bool enabled = true;
         public Logger()
         {
-            sourceWatcher = new FileSystemWatcher(@"C:\Users\Kirill\Desktop\SourceDirectory");
+            Directory.CreateDirectory(@"C:\Lab2_Yablonsky\SourceDirectory");                //
+            Directory.CreateDirectory(@"C:\Lab2_Yablonsky\TargetDirectory");                //
+            sourceWatcher = new FileSystemWatcher(@"C:\Lab2_Yablonsky\SourceDirectory");    // C:\Users\Kirill\Desktop\SourceDirectory");
 
             sourceWatcher.Filter = "*.txt";
             sourceWatcher.EnableRaisingEvents = true;
@@ -36,8 +38,8 @@ namespace Lab2_Service
             FileInfo file = new FileInfo(e.FullPath);
             string text;
             var key = Encryption.GenerateKey(16);
-            var clientDirectory = $@"C:\Users\Kirill\Desktop\TargetDirectory\ClientDirectory\{file.LastWriteTime:yyyy\\MM\\dd}";
-            var archieveDirectory = @"C:\Users\Kirill\Desktop\TargetDirectory\Archieve";
+            var clientDirectory = $@"C:\Lab2_Yablonsky\TargetDirectory\ClientDirectory\{file.LastWriteTime:yyyy\\MM\\dd}";  //C:\Users\Kirill\Desktop\TargetDirectory\ClientDirectory\{file.LastWriteTime:yyyy\\MM\\dd}";
+            var archieveDirectory = @"C:\Lab2_Yablonsky\TargetDirectory\Archieve";                                          //C:\Users\Kirill\Desktop\TargetDirectory\Archieve";
             var newFilePath = Path.Combine(clientDirectory, $"{Path.GetFileNameWithoutExtension(file.Name)}_{file.LastWriteTime:yyyy_MM_dd_hh_mm_ss}");
             var newArchivePath = Path.Combine(archieveDirectory, $"{Path.GetFileNameWithoutExtension(file.Name)}_{file.LastWriteTime:yyyy_MM_dd_hh_mm_ss}");
 
