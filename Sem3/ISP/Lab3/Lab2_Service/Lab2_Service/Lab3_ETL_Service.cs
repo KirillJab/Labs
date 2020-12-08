@@ -18,7 +18,7 @@ namespace Lab3
     public partial class Lab3_ETL_Service : ServiceBase
     {
         FileSystemWatcher sourceWatcher;
-        ETLOptions etlOptions;
+        EtlOptions etlOptions;
         Logger logger;
         public Lab3_ETL_Service()
         {
@@ -36,12 +36,12 @@ namespace Lab3
         void ConfigurateETL()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory;
-            OptionsManager optionsManager = new OptionsManager(Path.Combine(path);
-            etlOptions = optionsManager.GetOptions<ETLOptions>() as ETLOptions;
+            OptionsManager optionsManager = new OptionsManager(path);
+            etlOptions = optionsManager.GetOptions<EtlOptions>() as EtlOptions;
 
-
-            Directory.CreateDirectory(etlOptions.DirectoryOptions.SourceDirectory); 
+            Directory.CreateDirectory(etlOptions.DirectoryOptions.SourceDirectory);
             Directory.CreateDirectory(etlOptions.DirectoryOptions.TargetDirectory);
+
             sourceWatcher = new FileSystemWatcher(etlOptions.DirectoryOptions.SourceDirectory);
             sourceWatcher.Filter = "*.txt";
             sourceWatcher.EnableRaisingEvents = true;
@@ -51,11 +51,12 @@ namespace Lab3
 
             logger = new Logger(etlOptions.LoggingOptions);
             Thread loggerThread = new Thread(new ThreadStart(logger.Start));
-            logger.Log(path);
             loggerThread.Start();
-
-            string str = Newtonsoft.Json.JsonConvert.SerializeObject(etlOptions, Newtonsoft.Json.Formatting.Indented);
-            logger.Log(str);
+            logger.Log($"Domain directory: {path}");
+            logger.Log(optionsManager.log);
+            logger.Log($"Source Directory: {etlOptions.DirectoryOptions.SourceDirectory}");
+            logger.Log($"Encryption Enabled: {etlOptions.EncryptionOptions.EncryptionEnabled}");
+            logger.Log($"Compression Enabled: {etlOptions.ArchiveOptions.CompressionEnabled}");
         }
         protected override void OnStop()
         {
@@ -69,11 +70,11 @@ namespace Lab3
             FileInfo file = new FileInfo(e.FullPath);
             string text;
             byte[] key = Encryption.GenerateKey(16);
-            string clientDirectory = etlOptions.DirectoryOptions.TargetDirectory;                                              //$@"C:\Lab2_Yablonsky\TargetDirectory\ClientDirectory\{file.LastWriteTime:yyyy\\MM\\dd}";  //C:\Users\Kirill\Desktop\TargetDirectory\ClientDirectory\{file.LastWriteTime:yyyy\\MM\\dd}";
-            string archieveDirectory = etlOptions.DirectoryOptions.ArchiveDirectory;                                         //C:\Users\Kirill\Desktop\TargetDirectory\Archieve";
+            string clientDirectory = etlOptions.DirectoryOptions.TargetDirectory;
+            string archieveDirectory = etlOptions.DirectoryOptions.ArchiveDirectory;
             string newFilePath = Path.Combine(clientDirectory, $"{Path.GetFileNameWithoutExtension(file.Name)}_{file.LastWriteTime:yyyy_MM_dd_hh_mm_ss}");
             string newArchivePath = Path.Combine(archieveDirectory, $"{Path.GetFileNameWithoutExtension(file.Name)}_{file.LastWriteTime:yyyy_MM_dd_hh_mm_ss}");
-            CompressionLevel compressionLevel = etlOptions.ArchiveOptions.compressionLevel;
+            bool compressionEnabled = etlOptions.ArchiveOptions.CompressionEnabled;
 
             CreateUniquePath(ref newFilePath);
             CreateUniquePath(ref newArchivePath);
@@ -82,17 +83,21 @@ namespace Lab3
             newArchivePath += ".gz";
 
             AwaitForTheFileToClose(file.FullName);
-            File.WriteAllText(file.FullName, Encryption.Encrypt(File.ReadAllText(file.FullName), key));
+            if (etlOptions.EncryptionOptions.EncryptionEnabled)
+            {
+                File.WriteAllText(file.FullName, Encryption.Encrypt(File.ReadAllText(file.FullName), key));
+            }
             Directory.CreateDirectory(clientDirectory);
             Directory.CreateDirectory(archieveDirectory);
-            ArchiveGZip.GZip(file.FullName, newFilePath, compressionLevel);
-            ArchiveGZip.GZip(file.FullName, newArchivePath, compressionLevel);
+            ArchiveGZip.GZip(file.FullName, newFilePath, compressionEnabled);
+            ArchiveGZip.GZip(file.FullName, newArchivePath, compressionEnabled);
             ArchiveGZip.DeGZip(newFilePath, Path.ChangeExtension(newFilePath, "txt"));
             File.Delete(newFilePath);
             File.Delete(file.FullName);
 
             newFilePath = Path.ChangeExtension(newFilePath, "txt");
-            text = Encryption.Decrypt(File.ReadAllText(newFilePath), key);
+
+            text = etlOptions.EncryptionOptions.EncryptionEnabled ? Encryption.Decrypt(File.ReadAllText(newFilePath), key) : File.ReadAllText(newFilePath);
             File.WriteAllText(newFilePath, text);
         }
         private static void AwaitForTheFileToClose(string path)

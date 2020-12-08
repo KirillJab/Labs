@@ -9,51 +9,103 @@ namespace Lab3
 {
     class OptionsManager
     {
-        EtlJsonOptions EtlJsonOptions;
-        ETLOptions DefaultOptions = new ETLOptions();
-        bool isJsonFoundAndValid;
-        //bool isXMLValid;
+        EtlJsonOptions etlJsonOptions;
+        EtlXmlOptions etlXmlOptions;
+        EtlOptions DefaultOptions = new EtlOptions();
+        public string log = "";
+        public bool JsonExists;
+        public bool isJsonValid;
+        public bool XmlExists;
+        public bool isXmlValid;
         public OptionsManager(string path)
         {
-            string jsonPath = Path.Combine(path, "appsettings.json");
+            string input;
+            string jsonPath = $"{path}\\appsettings.json";
+            string xmlPath = $"{path}\\config.xml";
             if (File.Exists(jsonPath))
             {
+                JsonExists = true;
+                log += "\tappsettings.json found ";
                 try
                 {
-                    string input = File.ReadAllText(jsonPath);
-                    EtlJsonOptions = new EtlJsonOptions(input);
-                    isJsonFoundAndValid = true;
+                    input = File.ReadAllText(jsonPath);
+                    etlJsonOptions = new EtlJsonOptions(input);
+                    isJsonValid = true;
+                    log += "and valid.";
                 }
                 catch
                 {
-                    isJsonFoundAndValid = false;
-                    throw;
+                    log += "but isn't valid.";
+                    isJsonValid = false;
                 }
             }
             else
             {
-                isJsonFoundAndValid = false;
+                log += "\tappsettings.json not found";
+                isJsonValid = false;
+                JsonExists = false;
             }
-            if(!isJsonFoundAndValid)
+            if (File.Exists(xmlPath))
             {
-
-            }
-        }
-        public Options GetOptions<T>()
-        {
-            if (isJsonFoundAndValid)
-            {
-                return FindOption<T>(EtlJsonOptions);
+                log += "\n\t\t\tconfig.xml found ";
+                XmlExists = true;
+                try
+                {
+                    input = File.ReadAllText(xmlPath);
+                    etlXmlOptions = new EtlXmlOptions(input);
+                    isXmlValid = true;
+                    log += "and valid.";
+                }
+                catch
+                {
+                    log += "but isn't valid.";
+                    isXmlValid = false;
+                }
             }
             else
             {
-                return FindOption<T>(DefaultOptions);
+                log += "\n\t\t\tconfig.xml not found";
+                isXmlValid = false;
+                XmlExists = false;
+            }
+            if (isJsonValid)
+            {
+                log += "\n\t\t\tLoading appsettings.json";
+            }
+            else
+            {
+                if (isXmlValid)
+                {
+                    log += "\n\t\t\tLoading config.xml";
+                }
+                else
+                {
+                    log += "\n\t\t\tBoth configs are invalid. Loading Default config";
+                }
             }
         }
 
-        Options FindOption<T>(ETLOptions options)
+        public Options GetOptions<T>()
         {
-            if (typeof(T) == typeof(ETLOptions))
+            if (isJsonValid)
+            {
+                return FindOption<T>(etlJsonOptions);
+            }
+            else
+            {
+                if (isXmlValid)
+                {
+                    return FindOption<T>(etlXmlOptions);
+                }
+                else
+                {
+                    return FindOption<T>(DefaultOptions);
+                }
+            }
+        }
+        Options FindOption<T>(EtlOptions options)
+        {
+            if (typeof(T) == typeof(EtlOptions))
             {
                 return options;
             }

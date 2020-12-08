@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    class EtlJsonOptions : ETLOptions
+    class EtlJsonOptions : EtlOptions
     {
         public EtlJsonOptions(string json)
         {
-            ETLOptions EtlJsonOptions = Lab3.Converter.DeserializeJSON<ETLOptions>(json);
-            DirectoryOptions = EtlJsonOptions.DirectoryOptions;
-            EncryptionOptions = EtlJsonOptions.EncryptionOptions;
-            ArchiveOptions = EtlJsonOptions.ArchiveOptions;
-            LoggingOptions = EtlJsonOptions.LoggingOptions;
+            EtlOptions etlJsonOptions = Converter.DeserializeJSON<EtlOptions>(json);
+            DirectoryOptions = etlJsonOptions.DirectoryOptions;
+            EncryptionOptions = etlJsonOptions.EncryptionOptions;
+            ArchiveOptions = etlJsonOptions.ArchiveOptions;
+            LoggingOptions = etlJsonOptions.LoggingOptions;
         }
     }
 }

@@ -10,13 +10,13 @@ namespace Lab3
 {
     class ArchiveGZip
     {
-        public static void GZip(string source, string target, CompressionLevel compressionLevel)
+        public static void GZip(string source, string target, bool compressionEnabled)
         {
             using (FileStream sourceStream = new FileStream(source, FileMode.OpenOrCreate))
             {
                 using (FileStream targetStream = File.Create(target))
                 {
-                    using (GZipStream compressionStream = new GZipStream(targetStream, compressionLevel))
+                    using (GZipStream compressionStream = new GZipStream(targetStream, compressionEnabled ? CompressionLevel.Optimal : CompressionLevel.NoCompression))
                     {
                         sourceStream.CopyTo(compressionStream);
                     }

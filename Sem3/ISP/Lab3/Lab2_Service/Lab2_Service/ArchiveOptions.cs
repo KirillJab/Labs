@@ -9,7 +9,7 @@ namespace Lab3
 {
     class ArchiveOptions : Options
     {
-        public CompressionLevel compressionLevel { get; set; } = CompressionLevel.Optimal;
+        public bool CompressionEnabled { get; set; } = true;
         public ArchiveOptions()
         {
 

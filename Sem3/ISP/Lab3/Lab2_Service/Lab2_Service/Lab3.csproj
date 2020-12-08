@@ -56,7 +56,8 @@
     <Compile Include="DirectoryOptions.cs" />
     <Compile Include="Encryption.cs" />
     <Compile Include="EncryptionOptions.cs" />
-    <Compile Include="ETLOptions.cs" />
+    <Compile Include="EtlOptions.cs" />
+    <Compile Include="ETLXMLOptions.cs" />
     <Compile Include="Installer1.cs">
       <SubType>Component</SubType>
     </Compile>

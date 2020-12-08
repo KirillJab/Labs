@@ -18,6 +18,10 @@ namespace Lab3
 
         public void Start()
         {
+            if(!File.Exists(logOptions.LoggingPath))
+            {
+                File.Create(logOptions.LoggingPath).Close();
+            }
             while (logOptions.LoggingEnabled)
             {
                 Thread.Sleep(1000);
