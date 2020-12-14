@@ -45,7 +45,6 @@
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BusinessEntityAddress.cs" />
-    <Compile Include="Models\EmailAddress.cs" />
     <Compile Include="Models\Password.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonInfo.cs" />

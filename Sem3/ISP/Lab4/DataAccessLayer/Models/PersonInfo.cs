@@ -14,8 +14,6 @@ namespace DataAccessLayer.Models
         public Password Password { get; set; }
         public PersonPhone PersonPhone { get; set; }
 
-        //public EmailAddress Email { get; set; }
-
         public PersonInfo()
         {
 
@@ -28,14 +26,5 @@ namespace DataAccessLayer.Models
             Password = password;
             PersonPhone = personPhone;
         }
-        //public PersonInfo(Person person, Password password, EmailAddress email, PersonPhone personPhone, Address address, BusinessEntityAddress businessEntityAddress)
-        //{
-        //    Person = person;
-        //    Address = address;
-        //    BusinessEntityAddress = businessEntityAddress;
-        //    Email = email;
-        //    Password = password;
-        //    PersonPhone = personPhone;
-        //}
     }
 }
