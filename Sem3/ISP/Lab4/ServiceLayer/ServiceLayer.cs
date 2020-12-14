@@ -9,7 +9,7 @@ using DataAccessLayer;
 
 namespace ServiceLayer
 {
-    public class ServiceLayer
+    public class ServiceLayer : IServiceLayer
     {
         public DataAccessLayer.DataAccessLayer dal;
         public ServiceLayer(DataAccessLayer.Options.ConnectionOptions options, IParser parser)

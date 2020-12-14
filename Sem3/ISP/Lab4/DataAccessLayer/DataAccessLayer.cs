@@ -12,7 +12,7 @@ using DataAccessLayer.Models;
 
 namespace DataAccessLayer
 {
-    public class DataAccessLayer
+    public class DataAccessLayer : IDataAccessLayer
     {
         SqlConnection connection;
         IParser parser;
