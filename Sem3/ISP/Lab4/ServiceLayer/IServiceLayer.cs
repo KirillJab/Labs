@@ -1,12 +1,10 @@
-using Converter;
 using DataAccessLayer.Models;
-using System.Data.SqlClient;
+using System.Collections.Generic;
 
-namespace DataAccessLayer
+namespace ServiceLayer
 {
-    public interface IDataAccessLayer
+    public interface IServiceLayer
     {
-        Person GetPerson(int id);
-        T GetPersonOpts<T>(int id) where T : new();
+        List<PersonInfo> GetPersonInfoList(int count);
     }
 }
