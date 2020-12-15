@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessLayer.cs" />
+    <Compile Include="IDataAccessLayer.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BusinessEntityAddress.cs" />
     <Compile Include="Models\Password.cs" />
