@@ -1,5 +1,9 @@
 #### Добрый день! Постарался реализовать все 17 пунктов)
 Ниже краткое описание самой лабораторной работы (а точнее того, что я делал)
+
+ссылка на видео-демонстрацию работы программы
+https://drive.google.com/file/d/1JRKKWQPEe0Re7iX0jQSxyfBJRlUSZU8F/view?usp=sharing
+
 ### Converter (IParser)
 Универсальный парсер, либа, парсит XML и Json.
 T DeserializeJson<T>(string), T DeserializeXML<T>(string) - методы класса Converter для преобразования JSON или XML строки соответственно в объект любого класса. Используют приватные методы T Deserizalize<T>(List<string>), List<string> SplitJSON(string) и List<string> SplitXML(string) для своей работы 
