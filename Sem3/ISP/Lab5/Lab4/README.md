@@ -5,7 +5,7 @@
 Асинхронные методы в соответствии с ТАР в названии имеют Async.
 
 ссылка на видео-демонстрацию работы программы:
-https://drive.google.com/file/d/1-bzrrBP5DZDrC_nFPE7VI5yLjjSaIpP5/view?usp=sharing
+https://drive.google.com/file/d/19riEhJTKREmQW0T-oUvxGSuRbr2XGxp7/view?usp=sharing
 
 
 
