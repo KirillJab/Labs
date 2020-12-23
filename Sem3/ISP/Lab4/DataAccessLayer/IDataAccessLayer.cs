@@ -1,4 +1,4 @@
-﻿using Converter;
+using Converter;
 using DataAccessLayer.Models;
 using System.Data.SqlClient;
 
